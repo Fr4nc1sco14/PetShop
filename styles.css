@@ -1,0 +1,103 @@
+/* — Reset básico — */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Arial', sans-serif;
+  background: #fff8f0;
+}
+
+/* — Navbar container — */
+.navbar {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* — Logo — */
+.navbar__logo img {
+  height: 50px;
+  /* substitui por um logo real */
+}
+
+/* — Menu de navegação — */
+.navbar__nav .nav__list {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+
+.navbar__nav .nav__item a {
+  text-decoration: none;
+  color: #555;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+
+.navbar__nav .nav__item a:hover {
+  color: #f7941d;
+}
+
+/* — Secção de Contacto — */
+.navbar__contact {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* círculo laranja do ícone */
+.contact__icon {
+  background-color: #f7941d;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.contact__icon i {
+  color: #fff;
+  font-size: 18px;
+}
+
+/* texto “Contact us” e o número */
+.contact__text {
+  display: flex;
+  flex-direction: column;
+  line-height: 1.1;
+  font-size: 14px;
+  color: #333;
+}
+
+.contact__text span {
+  opacity: 0.8;
+}
+
+.contact__text strong {
+  font-size: 15px;
+  color: #f7941d;
+}
+
+
+/* — Responsividade simples — */
+@media (max-width: 768px) {
+  .navbar {
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+  }
+  .navbar__nav .nav__list {
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+  }
+  .navbar__contact {
+    margin-top: 10px;
+  }
+}
