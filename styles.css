@@ -58,6 +58,7 @@ body {
 
 .nav__item a {
   color: gray;
+  font-weight: 600;
   text-decoration: none;
   font-size: 16px;
 }
@@ -94,6 +95,7 @@ body {
 
 .contact__text span {
   color: gray;
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -110,6 +112,7 @@ body {
   background-color: #fff9f1;
   min-height: 80vh;
 }
+
 
 .hero_image {
   position: relative;
@@ -131,7 +134,8 @@ body {
 }
 
 .subtitle {
-  color: #f17d86;
+  font-family: "Poppins", sans-serif;
+  color: #3fb1ab;
   text-transform: uppercase;
   font-size: 14px;
   margin-bottom: 10px;
@@ -158,7 +162,11 @@ p {
 }
 
 .btn {
+
   background-color: #f17d86;
+  font-weight: 600;
+  font-family: 'Poppins', sans-serif;
+    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
   color: white;
   padding: 10px 20px;
   border-radius: 35px;
@@ -180,7 +188,7 @@ p {
   flex-wrap: wrap;
   gap: 1.5rem;
   padding: 3rem 1rem;
-  background: #f9f9f9;
+  background: #ffffff;
 }
 
 .feature-box {
@@ -262,16 +270,26 @@ p {
 }
 
 
-/* Secção Intro */
+.main-content {
+  background-color: #ffffff;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+/* Left column: Intro */
 .intro {
-  text-align: center;
-  padding: 3rem 1rem;
-  max-width: 800px;
-  margin: 0 auto;
+  margin-top: 100px;
+  margin-left: 200px;
+  flex: 1;
+  text-align: left;
+  max-width: 600px;
 }
 
 .intro h1 {
-  font-size: 2rem;
+  font-size: 2.5rem;
   margin-bottom: 1rem;
 }
 
@@ -280,40 +298,30 @@ p {
   color: #555;
 }
 
-
-/* Accordion */
+/* Accordion (unchanged) */
 .accordion {
   margin-top: 2rem;
   border-radius: 8px;
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-
-.accordion-item {
-  border-top: 1px solid #eee;
-}
-
+.accordion-item { border-top: 1px solid #eee; }
 .accordion-header {
   background: #f0f0f0;
   padding: 1rem 1.5rem;
   cursor: pointer;
   font-weight: 600;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+  position: relative;
 }
-
 .accordion-header::after {
   content: "\f078";
   font-family: "Font Awesome 6 Free";
   font-weight: 900;
+  position: absolute;
+  right: 1.5rem;
   transition: transform 0.3s;
 }
-
-.accordion-header.active::after {
-  transform: rotate(180deg);
-}
-
+.accordion-header.active::after { transform: rotate(180deg); }
 .accordion-content {
   display: none;
   padding: 1rem 1.5rem;
@@ -322,40 +330,45 @@ p {
   font-size: 0.95rem;
 }
 
-
-/* Secção Stats */
+/* Right column: Stats with overlapping boxes */
 .stats {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 2rem;
-  padding: 3rem 1rem;
-  flex-wrap: wrap;
+  flex: 1;
+  margin-bottom: 100px;
+  margin-right: 100px;
+  position: relative;
+  max-width: 600px;
 }
-
 .stats img {
-  max-width: 300px;
-  height: auto;
+  width: 100%;
+  display: block;
   border-radius: 12px;
 }
-
 .stat-box {
+  position: absolute;
   background: #fff;
-  padding: 1.5rem 2rem;
+  padding: 1rem 1.5rem;
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   text-align: center;
-  min-width: 150px;
+  min-width: 140px;
 }
-
 .stat-box h2 {
   margin: 0;
   font-size: 2rem;
   color: #ff7f50;
 }
-
 .stat-box p {
   margin: 0.5rem 0 0;
   font-size: 1rem;
   color: #555;
+}
+
+/* Position each stat box without affecting flow */
+.stat-1 {
+  top: 10%;
+  right: 90%;
+}
+.stat-2 {
+  bottom: 10%;
+  right: -10%;
 }
