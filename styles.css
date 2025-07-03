@@ -1,3 +1,4 @@
+/* Estilos existentes mantidos até a seção de media queries */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 body {
@@ -113,7 +114,6 @@ body {
   min-height: 80vh;
 }
 
-
 .hero_image {
   position: relative;
 }
@@ -126,11 +126,10 @@ body {
   margin-left: 250px;
 }
 
-
 .hero_content {
   max-width: 500px;
   margin-right: 200px;
-    font-family: "Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
 }
 
 .subtitle {
@@ -140,7 +139,6 @@ body {
   font-size: 14px;
   margin-bottom: 10px;
   font-weight: 600;
-  font-family: "Poppins", sans-serif;
 }
 
 h1 {
@@ -162,11 +160,10 @@ p {
 }
 
 .btn {
-
   background-color: #f17d86;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
-    box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 6px -2px rgba(0, 0, 0, 0.3);
   color: white;
   padding: 10px 20px;
   border-radius: 35px;
@@ -179,7 +176,6 @@ p {
 .btn:hover {
   background-color: #E65C50;
 }
-
 
 /* Secção Features */
 .features {
@@ -209,55 +205,54 @@ p {
 .feature-icon1 {
   width: 60px;
   height: 60px;
-  background-color: #3fb1ab; /* Cor de fundo da bola */
-  border-radius: 50%; /* Faz virar um círculo */
+  background-color: #3fb1ab;
+  border-radius: 50%;
   display: flex;
   margin-left: 100px;
   align-items: center;
   justify-content: center;
-  font-size: 30px; /* Tamanho do emoji ou ícone */
-  margin-bottom: 10px; /* Espaçamento opcional */
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .feature-icon2 {
   width: 60px;
   height: 60px;
-  background-color: #ff901a; /* Cor de fundo da bola */
-  border-radius: 50%; /* Faz virar um círculo */
+  background-color: #ff901a;
+  border-radius: 50%;
   display: flex;
   margin-left: 100px;
   align-items: center;
   justify-content: center;
-  font-size: 30px; /* Tamanho do emoji ou ícone */
-  margin-bottom: 10px; /* Espaçamento opcional */
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .feature-icon3 {
   width: 60px;
   height: 60px;
-  background-color: #f17d86; /* Cor de fundo da bola */
-  border-radius: 50%; /* Faz virar um círculo */
+  background-color: #f17d86;
+  border-radius: 50%;
   display: flex;
   margin-left: 100px;
   align-items: center;
   justify-content: center;
-  font-size: 30px; /* Tamanho do emoji ou ícone */
-  margin-bottom: 10px; /* Espaçamento opcional */
+  font-size: 30px;
+  margin-bottom: 10px;
 }
 
 .feature-icon4 {
   width: 60px;
   height: 60px;
-  background-color: #fab756; /* Cor de fundo da bola */
-  border-radius: 50%; /* Faz virar um círculo */
+  background-color: #fab756;
+  border-radius: 50%;
   display: flex;
   margin-left: 100px;
   align-items: center;
   justify-content: center;
-  font-size: 30px; /* Tamanho do emoji ou ícone */
-  margin-bottom: 10px; /* Espaçamento opcional */
+  font-size: 30px;
+  margin-bottom: 10px;
 }
-
 
 .feature-box h3 {
   font-size: 1.2rem;
@@ -268,7 +263,6 @@ p {
   font-size: 0.95rem;
   color: #555;
 }
-
 
 .main-content {
   background-color: #ffffff;
@@ -298,7 +292,12 @@ p {
   color: #555;
 }
 
-/* Accordion (unchanged) */
+#p-top {
+  color: #3fb1ab;
+  font-weight: 600;
+}
+
+/* Accordion */
 .accordion {
   margin-top: 2rem;
   border-radius: 8px;
@@ -355,7 +354,6 @@ p {
 .stat-box h2 {
   margin: 0;
   font-size: 2rem;
-  color: #ff7f50;
 }
 .stat-box p {
   margin: 0.5rem 0 0;
@@ -367,8 +365,312 @@ p {
 .stat-1 {
   top: 10%;
   right: 90%;
+  color: #E65C50;
 }
 .stat-2 {
   bottom: 10%;
   right: -10%;
+  color: #3fb1ab;
+}
+
+.BookService {
+  background-color: #3fb1ab;
+  width: 100%;
+  height: 600px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries para Responsividade */
+
+/* Ecrãs até 1400px */
+@media (max-width: 1400px) {
+  .navbar__logo {
+    margin-left: 150px;
+  }
+  .navbar__contact {
+    margin-right: 150px;
+  }
+  .hero_image img {
+    margin-left: 150px;
+    width: 500px;
+    height: 450px;
+  }
+  .hero_content {
+    margin-right: 150px;
+    max-width: 450px;
+  }
+  .intro {
+    margin-left: 150px;
+  }
+  .stats {
+    margin-right: 50px;
+  }
+}
+
+/* Ecrãs até 1200px */
+@media (max-width: 1200px) {
+  .navbar__logo {
+    margin-left: 50px;
+  }
+  .navbar__contact {
+    margin-right: 50px;
+  }
+  .hero_image img {
+    margin-left: 50px;
+    width: 450px;
+    height: 400px;
+  }
+  .hero_content {
+    margin-right: 50px;
+    max-width: 400px;
+  }
+  .intro {
+    margin-left: 50px;
+  }
+  .stats {
+    margin-right: 50px;
+  }
+  .features {
+    gap: 1rem;
+    padding: 2rem 1rem;
+  }
+  .feature-box {
+    flex: 1 1 45%;
+    max-width: 45%;
+  }
+}
+
+/* Ecrãs até 992px */
+@media (max-width: 992px) {
+  .navbar__logo {
+    margin-left: 30px;
+  }
+  .navbar__contact {
+    margin-right: 30px;
+  }
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    padding: 30px;
+  }
+  .hero_image img {
+    margin-left: 0;
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+  }
+  .hero_content {
+    margin-right: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+  .hero_content h1 {
+    font-size: 30px;
+  }
+  .intro {
+    margin-left: 30px;
+    margin-top: 50px;
+    max-width: 100%;
+  }
+  .stats {
+    margin-right: 30px;
+    margin-bottom: 50px;
+  }
+  .stat-box {
+    position: static;
+    margin: 1rem auto;
+  }
+  .main-content {
+    flex-direction: column;
+    align-items: center;
+    padding: 1.5rem;
+  }
+}
+
+/* Ecrãs até 768px */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
+  }
+  .navbar__logo {
+    margin-left: 20px;
+  }
+  .navbar__nav {
+    margin-top: 15px;
+    width: 100%;
+  }
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+  }
+  .nav__item {
+    width: 100%;
+    text-align: center;
+  }
+  .navbar__contact {
+    margin-top: 15px;
+    margin-right: 0;
+    align-self: center;
+  }
+  .hero {
+    padding: 20px;
+  }
+  .hero_content h1 {
+    font-size: 28px;
+  }
+  .hero_content p {
+    font-size: 14px;
+  }
+  .btn {
+    padding: 8px 16px;
+    font-size: 14px;
+  }
+  .features {
+    flex-direction: column;
+    align-items: center;
+  }
+  .feature-box {
+    flex: 1 1 100%;
+    max-width: 100%;
+  }
+  .feature-icon1, .feature-icon2, .feature-icon3, .feature-icon4 {
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .intro {
+    margin-left: 0;
+    text-align: center;
+  }
+  .stats {
+    margin-right: 0;
+  }
+}
+
+/* Ecrãs até 576px */
+@media (max-width: 576px) {
+  .navbar__logo {
+    margin-left: 15px;
+  }
+  .navbar__contact {
+    margin-right: 15px;
+  }
+  .logo__subtitle {
+    display: none;
+  }
+  .nav__item a {
+    font-size: 14px;
+  }
+  .hero_content h1 {
+    font-size: 24px;
+  }
+  .hero_content p {
+    font-size: 13px;
+  }
+  .btn {
+    padding: 7px 14px;
+    font-size: 13px;
+  }
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+  .intro p {
+    font-size: 0.9rem;
+  }
+  .stats img {
+    max-width: 100%;
+  }
+}
+
+/* Ecrãs até 480px */
+@media (max-width: 480px) {
+  .navbar {
+    padding: 10px;
+  }
+  .navbar__logo {
+    margin-left: 10px;
+  }
+  .navbar__contact {
+    margin-right: 10px;
+  }
+  .nav__list {
+    gap: 10px;
+  }
+  .nav__item a {
+    font-size: 13px;
+  }
+  .hero {
+    padding: 15px;
+  }
+  .hero_image img {
+    max-width: 100%;
+  }
+  .hero_content h1 {
+    font-size: 20px;
+  }
+  .hero_content p {
+    font-size: 12px;
+  }
+  .btn {
+    padding: 6px 12px;
+    font-size: 12px;
+  }
+  .features {
+    padding: 1.5rem 0.5rem;
+  }
+  .feature-box h3 {
+    font-size: 1rem;
+  }
+  .feature-box p {
+    font-size: 0.85rem;
+  }
+  .intro {
+    margin-top: 20px;
+  }
+  .intro h1 {
+    font-size: 1.5rem;
+  }
+  .intro p {
+    font-size: 0.85rem;
+  }
+  .stats {
+    margin-bottom: 20px;
+  }
+  .stat-box {
+    position: absolute;
+    max-width: 80px;
+    max-height: 50px;
+  }
+  .stat-box h2 {
+    font-size: 1.5rem;
+  }
+  .stat-box p {
+    font-size: 0.9rem;
+  }
+  .stat-1 {
+   top: 10%;
+  right: 70%;
+  }
+  .stat-2 {
+    top: 80%;
+  }
+}
+
+/* Regra geral para imagens responsivas */
+img {
+  max-width: 100%;
+  height: auto;
 }
