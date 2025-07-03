@@ -375,8 +375,35 @@ p {
 
 .BookService {
   background-color: #3fb1ab;
-  width: 100%;
-  height: 600px;
+  width: auto;
+  height: auto;
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.img-bookservice {
+  width: 500px;
+  margin: auto;
+}
+
+.bookservice-text {
+  width: 40%;
+  margin: auto;
+}
+
+
+#bookservice-p {
+  color: #e8ba5d;
+}
+
+.bookservice-text p {
+  color: #ffffff;
+}
+
+.bookservice-text h1 {
+color: #ffffff;
 }
 
 
