@@ -1,103 +1,361 @@
-/* — Reset básico — */
-* {
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-color: #fff9f1;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
-}
-body {
-  font-family: 'Arial', sans-serif;
-  background: #fff8f0;
 }
 
-/* — Navbar container — */
 .navbar {
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 20px 30px;
+  background-color: #fff9f1;
   display: flex;
-  align-items: center;
   justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  background-color: transparent;
 }
 
-/* — Logo — */
-.navbar__logo img {
-  height: 50px;
-  /* substitui por um logo real */
-}
-
-/* — Menu de navegação — */
-.navbar__nav .nav__list {
-  list-style: none;
-  display: flex;
-  gap: 30px;
-}
-
-.navbar__nav .nav__item a {
-  text-decoration: none;
-  color: #555;
-  font-weight: 500;
-  transition: color 0.2s;
-}
-
-.navbar__nav .nav__item a:hover {
-  color: #f7941d;
-}
-
-/* — Secção de Contacto — */
-.navbar__contact {
+.navbar__logo {
   display: flex;
   align-items: center;
-  gap: 12px;
+  margin-left: 300px;
 }
 
-/* círculo laranja do ícone */
-.contact__icon {
-  background-color: #f7941d;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
+.logo__icon {
+  color: #F5A623;
+  font-size: 24px;
+  margin-right: 10px;
+}
+
+.logo__text {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+}
+
+.logo__title {
+  font-weight: bold;
+  color: black;
+  font-size: 20px;
+}
+
+.logo__subtitle {
+  font-size: 14px;
+  color: black;
+}
+
+.navbar__nav {
+  flex: 1;
+  display: flex;
   justify-content: center;
 }
 
-.contact__icon i {
-  color: #fff;
-  font-size: 18px;
+.nav__list {
+  display: flex;
+  list-style: none;
+  gap: 20px;
 }
 
-/* texto “Contact us” e o número */
+.nav__item a {
+  color: gray;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.nav__item a.active {
+  color: #F5A623;
+}
+
+.navbar__contact {
+  margin-right: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.contact__icon--circle {
+  background-color: #f17d86;
+  border-radius: 50%;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 10px;
+}
+
+.contact__icon--circle i {
+  color: white;
+  font-size: 20px;
+}
+
 .contact__text {
   display: flex;
   flex-direction: column;
-  line-height: 1.1;
-  font-size: 14px;
-  color: #333;
 }
 
 .contact__text span {
-  opacity: 0.8;
+  color: gray;
+  font-size: 14px;
 }
 
 .contact__text strong {
-  font-size: 15px;
-  color: #f7941d;
+  color: black;
+  font-size: 16px;
+}
+
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+  background-color: #fff9f1;
+  min-height: 80vh;
+}
+
+.hero_image {
+  position: relative;
+}
+
+.hero_image img {
+  padding: 20px;
+  width: 600px;
+  height: 550px;
+  object-fit: cover;
+  margin-left: 250px;
 }
 
 
-/* — Responsividade simples — */
-@media (max-width: 768px) {
-  .navbar {
-    flex-wrap: wrap;
-    gap: 15px;
-    justify-content: center;
-  }
-  .navbar__nav .nav__list {
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 15px;
-  }
-  .navbar__contact {
-    margin-top: 10px;
-  }
+.hero_content {
+  max-width: 500px;
+  margin-right: 200px;
+    font-family: "Poppins", sans-serif;
+}
+
+.subtitle {
+  color: #f17d86;
+  text-transform: uppercase;
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+h1 {
+  font-size: 36px;
+  font-weight: bold;
+  color: black;
+  margin-bottom: 20px;
+}
+
+h1 span {
+  color: #F5A623;
+}
+
+p {
+  color: gray;
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+.btn {
+  background-color: #f17d86;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 35px;
+  text-transform: uppercase;
+  border: none;
+  cursor: pointer;
+  height: 50px;
+}
+
+.btn:hover {
+  background-color: #E65C50;
+}
+
+
+/* Secção Features */
+.features {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  padding: 3rem 1rem;
+  background: #f9f9f9;
+}
+
+.feature-box {
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  padding: 2rem 1.5rem;
+  flex: 1 1 220px;
+  max-width: 250px;
+  text-align: center;
+  transition: transform 0.3s ease;
+}
+
+.feature-box:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon1 {
+  width: 60px;
+  height: 60px;
+  background-color: #3fb1ab; /* Cor de fundo da bola */
+  border-radius: 50%; /* Faz virar um círculo */
+  display: flex;
+  margin-left: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; /* Tamanho do emoji ou ícone */
+  margin-bottom: 10px; /* Espaçamento opcional */
+}
+
+.feature-icon2 {
+  width: 60px;
+  height: 60px;
+  background-color: #ff901a; /* Cor de fundo da bola */
+  border-radius: 50%; /* Faz virar um círculo */
+  display: flex;
+  margin-left: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; /* Tamanho do emoji ou ícone */
+  margin-bottom: 10px; /* Espaçamento opcional */
+}
+
+.feature-icon3 {
+  width: 60px;
+  height: 60px;
+  background-color: #f17d86; /* Cor de fundo da bola */
+  border-radius: 50%; /* Faz virar um círculo */
+  display: flex;
+  margin-left: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; /* Tamanho do emoji ou ícone */
+  margin-bottom: 10px; /* Espaçamento opcional */
+}
+
+.feature-icon4 {
+  width: 60px;
+  height: 60px;
+  background-color: #fab756; /* Cor de fundo da bola */
+  border-radius: 50%; /* Faz virar um círculo */
+  display: flex;
+  margin-left: 100px;
+  align-items: center;
+  justify-content: center;
+  font-size: 30px; /* Tamanho do emoji ou ícone */
+  margin-bottom: 10px; /* Espaçamento opcional */
+}
+
+
+.feature-box h3 {
+  font-size: 1.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.feature-box p {
+  font-size: 0.95rem;
+  color: #555;
+}
+
+
+/* Secção Intro */
+.intro {
+  text-align: center;
+  padding: 3rem 1rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.intro h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.intro p {
+  font-size: 1rem;
+  color: #555;
+}
+
+
+/* Accordion */
+.accordion {
+  margin-top: 2rem;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+.accordion-item {
+  border-top: 1px solid #eee;
+}
+
+.accordion-header {
+  background: #f0f0f0;
+  padding: 1rem 1.5rem;
+  cursor: pointer;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-header::after {
+  content: "\f078";
+  font-family: "Font Awesome 6 Free";
+  font-weight: 900;
+  transition: transform 0.3s;
+}
+
+.accordion-header.active::after {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  display: none;
+  padding: 1rem 1.5rem;
+  background: #fff;
+  color: #555;
+  font-size: 0.95rem;
+}
+
+
+/* Secção Stats */
+.stats {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  padding: 3rem 1rem;
+  flex-wrap: wrap;
+}
+
+.stats img {
+  max-width: 300px;
+  height: auto;
+  border-radius: 12px;
+}
+
+.stat-box {
+  background: #fff;
+  padding: 1.5rem 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  text-align: center;
+  min-width: 150px;
+}
+
+.stat-box h2 {
+  margin: 0;
+  font-size: 2rem;
+  color: #ff7f50;
+}
+
+.stat-box p {
+  margin: 0.5rem 0 0;
+  font-size: 1rem;
+  color: #555;
 }
