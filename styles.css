@@ -22,26 +22,9 @@ body {
   margin-left: 400px;
 }
 
-.logo__icon {
-  color: #F5A623;
-  font-size: 24px;
-  margin-right: 10px;
-}
-
-.logo__text {
-  display: flex;
-  flex-direction: column;
-}
-
-.logo__title {
-  font-weight: bold;
-  color: black;
-  font-size: 20px;
-}
-
-.logo__subtitle {
-  font-size: 14px;
-  color: black;
+.logo__image {
+  width: 120px;      
+  height: auto;
 }
 
 .navbar__menu {
@@ -427,75 +410,98 @@ p {
 
 .PetCareServices {
   width: 100%;
-  height: auto;
   padding: 20px;
 }
 
 .PetCareServices p {
-  color:#3fb1ab;
+  color: #3fb1ab;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .PetCareServices h1 {
-  color: black;
+  color: #000;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-bottom: 20px;
 }
 
+/* Grid que posiciona os cards e a imagem */
+.services-container {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas:
+    "top-left img top-right"
+    "bottom-left img bottom-right";
+  gap: 20px;
+  align-items: center;
+  justify-items: center;
+}
+
+/* Cards */
 .card {
+  width: 300px;
+  border-radius: 8px;
   padding: 20px;
   display: flex;
   align-items: center;
-  max-width: 600px;
-  margin: 20px auto;
 }
 
-.number1 {
-  font-size: 72px;
-  font-weight: bold;
-  color: #3fb1ab;
-  margin-right: 20px;
-}
+/* Posicionamento no grid */
+.card.top-left     { grid-area: top-left;     }
+.card.top-right    { grid-area: top-right;    }
+.card.bottom-left  { grid-area: bottom-left;  }
+.card.bottom-right { grid-area: bottom-right; }
 
-.number2 {
-  font-size: 72px;
-  font-weight: bold;
-  color: #ff901a;
-  margin-right: 20px;
-}
-
-.number3 {
-  font-size: 72px;
-  font-weight: bold;
-  color: #f17d86;
-  margin-right: 20px;
-}
-
+/* Números dos cards */
+.number1,
+.number2,
+.number3,
 .number4 {
   font-size: 72px;
   font-weight: bold;
-  color: #fab756;
   margin-right: 20px;
 }
 
+.number1 { color: #3fb1ab; }
+.number2 { color: #ff901a; }
+.number3 { color: #f17d86; }
+.number4 { color: #fab756; }
+
+/* Conteúdo de texto dentro dos cards */
 .text-content h2 {
   font-size: 24px;
   font-weight: bold;
-  color: #000;
-  margin-bottom: 10px;
+  margin: 0 0 10px;
 }
 
 .text-content p {
   font-size: 16px;
   color: #666;
   line-height: 1.5;
+  margin: 0;
 }
 
+/* Imagem central */
+.center-image {
+  grid-area: img;
+  width: 600px; /* ajusta ao teu gosto */
+  height: auto;
+}
 
+footer {
+  width: 100%;
+  height: auto;
+  background-color: #3fb1ab;
+}
 
+.logo__footer_image {
+  width: 150px;
+  height: auto;
+}
 
 
 
