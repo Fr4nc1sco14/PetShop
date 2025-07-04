@@ -412,6 +412,7 @@ p {
 .PetCareServices {
   width: 100%;
   padding: 20px;
+  margin-bottom: 40px;
 }
 
 .PetCareServices p {
@@ -493,16 +494,145 @@ p {
   height: auto;
 }
 
-footer {
-  width: 100%;
-  height: auto;
+/* Footer */
+.footer {
   background-color: #3fb1ab;
+  color: #fff;
+  padding: 40px 20px;
+  font-family: 'Poppins', sans-serif;
 }
 
-.logo__footer_image {
-  width: 150px;
-  height: auto;
+.footer__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
 }
+
+.footer__col {
+  flex: 1 1 220px;
+}
+
+/* Coluna 1 Links */
+.footer__logo {
+  width: 140px;
+  margin-bottom: 1rem;
+}
+
+.footer__links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__links li {
+  margin-bottom: 0.5rem;
+}
+
+.footer__links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.footer__links a:hover {
+  text-decoration: underline;
+}
+
+/* Coluna 2 Mapa */
+.footer__map {
+  position: relative;
+  padding-bottom: 75%; /* Proporção 4:3 */
+  height: 0;
+  overflow: hidden;
+}
+
+.footer__map iframe {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border: 0;
+}
+
+.footer__col--map h4 {
+  margin-bottom: 1rem;
+  font-size: 16px;
+  font-weight: 600;
+  text-align: center;
+}
+
+/* Coluna 3 Horário */
+.footer__col--hours h4 {
+  margin-bottom: 0.5rem;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.footer__col--hours p {
+  color: #fff;
+  margin: 0.25rem 0;
+  font-size: 14px;
+}
+
+/* Coluna 4 Redes Sociais em Coluna */
+.footer__social-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer__social-list li {
+  margin-bottom: 0.75rem;
+}
+
+.footer__social-list a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+}
+
+.footer__social-list a i {
+  margin-right: 0.5rem;
+  font-size: 20px;
+}
+
+.footer__social-list a:hover {
+  text-decoration: underline;
+}
+
+/* Bottom */
+.footer__bottom {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 14px;
+}
+
+.footer__bottom p {
+  color: #fff;
+}
+
+@media (max-width: 768px) {
+  .footer__container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .footer__left,
+  .footer__center,
+  .footer__right {
+    flex: 1 1 auto;
+  }
+  .footer__links li {
+    display: inline-block;
+    margin: 0 0.5rem;
+  }
+}
+
 
 
 
