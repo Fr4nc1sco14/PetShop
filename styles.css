@@ -617,326 +617,261 @@ p {
   color: #fff;
 }
 
+/* Media query para tablets e dispositivos menores (max-width: 768px) */
 @media (max-width: 768px) {
-  .footer__container {
-    flex-direction: column;
-    text-align: center;
-  }
-  .footer__left,
-  .footer__center,
-  .footer__right {
-    flex: 1 1 auto;
-  }
-  .footer__links li {
-    display: inline-block;
-    margin: 0 0.5rem;
-  }
-}
-
-
-
-
-
-
-
-/* Media Queries para Responsividade */
-
-/* Ecrãs até 1400px */
-@media (max-width: 1400px) {
-  .navbar__logo {
-    margin-left: 150px;
-  }
-  .navbar__contact {
-    margin-right: 150px;
-  }
-  .hero_image img {
-    margin-left: 150px;
-    width: 500px;
-    height: 450px;
-  }
-  .hero_content {
-    margin-right: 150px;
-    max-width: 450px;
-  }
-  .intro {
-    margin-left: 150px;
-  }
-  .stats {
-    margin-right: 50px;
-  }
-}
-
-/* Ecrãs até 1200px */
-@media (max-width: 1200px) {
-  .navbar__logo {
-    margin-left: 50px;
-  }
-  .navbar__contact {
-    margin-right: 50px;
-  }
-  .hero_image img {
-    margin-left: 50px;
-    width: 450px;
-    height: 400px;
-  }
-  .hero_content {
-    margin-right: 50px;
-    max-width: 400px;
-  }
-  .intro {
-    margin-left: 50px;
-  }
-  .stats {
-    margin-right: 50px;
-  }
-  .features {
-    gap: 1rem;
-    padding: 2rem 1rem;
-  }
-  .feature-box {
-    flex: 1 1 45%;
-    max-width: 45%;
-  }
-}
-
-/* Ecrãs até 992px */
-@media (max-width: 992px) {
-  .navbar__logo {
-    margin-left: 30px;
-  }
-  .navbar__contact {
-    margin-right: 30px;
-  }
-  .hero {
-    flex-direction: column;
-    align-items: center;
-    padding: 30px;
-  }
-  .hero_image img {
-    margin-left: 0;
-    width: 100%;
-    max-width: 400px;
-    height: auto;
-  }
-  .hero_content {
-    margin-right: 0;
-    max-width: 100%;
-    text-align: center;
-  }
-  .hero_content h1 {
-    font-size: 30px;
-  }
-  .intro {
-    margin-left: 30px;
-    margin-top: 50px;
-    max-width: 100%;
-  }
-  .stats {
-    margin-right: 30px;
-    margin-bottom: 50px;
-  }
-  .stat-box {
-    position: static;
-    margin: 1rem auto;
-  }
-  .main-content {
-    flex-direction: column;
-    align-items: center;
-    padding: 1.5rem;
-  }
-}
-
-/* Ecrãs até 768px */
-@media (max-width: 768px) {
+  /* Ajustes no Navbar */
   .navbar {
-    padding: 15px;
-    position: relative;
+    padding: 10px 20px;
+    flex-wrap: wrap;
   }
+
   .navbar__logo {
-    margin-left: 20px;
+    margin-left: 0;
   }
-  .menu-toggle {
-    display: block;
-  }
-  .navbar__menu {
+
+.navbar__menu {
     display: none;
     position: absolute;
-    top: 100%;
+    top: 60px;
     left: 0;
     width: 100%;
     background-color: #fff9f1;
-    z-index: 1000;
-  }
-  .navbar__menu.active {
-    display: block;
-  }
-  .navbar__nav {
-    display: flex;
     flex-direction: column;
     align-items: center;
     padding: 20px 0;
+    z-index: 1000;
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: opacity 0.3s ease, transform 0.3s ease;
   }
-  .navbar__contact {
+
+  .navbar__menu--open {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    margin-right: 0;
+    opacity: 1;
+    transform: translateY(0);
   }
+
   .nav__list {
     flex-direction: column;
-    align-items: center;
     gap: 15px;
-    padding: 20px 0;
+    padding: 0;
   }
-  .nav__item {
+
+  .navbar__contact {
+    margin-right: 0;
+    margin-top: 20px;
+  }
+
+  .menu-toggle {
+    z-index: 9999;
+    display: block;
+  }
+
+  /* Ajustes na seção Hero */
+  .hero {
+    flex-direction: column;
+    padding: 20px;
+    min-height: auto;
+  }
+
+  .hero_image img {
     width: 100%;
+    height: auto;
+    margin-left: 0;
+    padding: 0;
+  }
+
+  .hero_content {
+    max-width: 100%;
+    margin-right: 0;
     text-align: center;
   }
-  .hero {
-    padding: 20px;
-  }
-  .hero_content h1 {
-    font-size: 28px;
-  }
-  .hero_content p {
-    font-size: 14px;
-  }
-  .btn {
-    padding: 8px 16px;
-    font-size: 14px;
-  }
+
+  /* Ajustes na seção Features */
   .features {
     flex-direction: column;
     align-items: center;
+    padding: 2rem 1rem;
   }
+
   .feature-box {
-    flex: 1 1 100%;
     max-width: 100%;
+    margin-bottom: 20px;
   }
+
   .feature-icon1, .feature-icon2, .feature-icon3, .feature-icon4 {
     margin-left: auto;
     margin-right: auto;
   }
+
+  /* Ajustes no Main Content */
+  .main-content {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
   .intro {
     margin-left: 0;
+    margin-top: 0;
+    max-width: 100%;
     text-align: center;
   }
+
   .stats {
     margin-right: 0;
-  }
-}
-
-/* Ecrãs até 576px */
-@media (max-width: 576px) {
-  .navbar__logo {
-    margin-left: 15px;
-  }
-  .navbar__contact {
-    margin-right: 15px;
-  }
-  .logo__subtitle {
-    display: none;
-  }
-  .nav__item a {
-    font-size: 14px;
-  }
-  .hero_content h1 {
-    font-size: 24px;
-  }
-  .hero_content p {
-    font-size: 13px;
-  }
-  .btn {
-    padding: 7px 14px;
-    font-size: 13px;
-  }
-  .intro h1 {
-    font-size: 1.8rem;
-  }
-  .intro p {
-    font-size: 0.9rem;
-  }
-  .stats img {
+    margin-bottom: 0;
     max-width: 100%;
   }
-}
 
-/* Ecrãs até 480px */
-@media (max-width: 480px) {
-  .navbar {
+  .stats img {
+    width: 100%;
+  }
+
+  .stat-box {
+    position: static;
+    margin: 10px 0;
+  }
+
+  /* Ajustes na seção BookService */
+  .BookService {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .img-bookservice {
+    width: 100%;
+    margin: 0;
+  }
+
+  .img-bookservice img {
+    width: 100%;
+    height: auto;
+  }
+
+  .bookservice-text {
+    width: 100%;
+    text-align: center;
+    margin: 0;
+  }
+
+  /* Ajustes na seção PetCareServices */
+  .PetCareServices {
     padding: 10px;
   }
+
+  .services-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card, .center-image {
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 20px;
+  }
+
+  .center-image {
+    width: 100%;
+  }
+
+  /* Ajustes no Footer */
+  .footer__container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .footer__col {
+    flex: 1 1 100%;
+    text-align: center;
+    margin-bottom: 20px;
+  }
+
+  .footer__map {
+    padding-bottom: 50%; /* Mantém proporção do mapa */
+  }
+
+  /* Ajustes de fontes */
+  h1 {
+    font-size: 24px;
+  }
+
+  .subtitle {
+    font-size: 12px;
+  }
+
+  p {
+    font-size: 14px;
+  }
+
+  .btn {
+    padding: 12px 24px;
+  }
+}
+
+/* Media query para telemóveis (max-width: 480px) */
+@media (max-width: 480px) {
+  /* Ajustes adicionais no Navbar */
   .navbar__logo {
     margin-left: 10px;
   }
+
+  .logo__image {
+    width: 80px;
+  }
+
   .navbar__contact {
     margin-right: 10px;
   }
-  .nav__list {
-    gap: 10px;
-  }
-  .nav__item a {
-    font-size: 13px;
-  }
-  .hero {
-    padding: 15px;
-  }
-  .hero_image img {
-    max-width: 100%;
-  }
-  .hero_content h1 {
-    font-size: 20px;
-  }
-  .hero_content p {
-    font-size: 12px;
-  }
-  .btn {
-    padding: 6px 12px;
-    font-size: 12px;
-  }
-  .features {
-    padding: 1.5rem 0.5rem;
-  }
-  .feature-box h3 {
-    font-size: 1rem;
-  }
-  .feature-box p {
-    font-size: 0.85rem;
-  }
-  .intro {
-    margin-top: 20px;
-  }
-  .intro h1 {
-    font-size: 1.5rem;
-  }
-  .intro p {
-    font-size: 0.85rem;
-  }
-  .stats {
-    margin-bottom: 20px;
-  }
-  .stat-box {
-    position: absolute;
-    max-width: 80px;
-    max-height: 50px;
-  }
-  .stat-box h2 {
-    font-size: 1.5rem;
-  }
-  .stat-box p {
-    font-size: 0.9rem;
-  }
-  .stat-1 {
-    top: 10%;
-    right: 70%;
-  }
-  .stat-2 {
-    top: 80%;
-  }
-}
 
-/* Regra geral para imagens responsivas */
-img {
-  max-width: 100%;
-  height: auto;
+  .contact__text span,
+  .contact__text strong {
+    font-size: 12px;
+  }
+
+  /* Ajustes na seção Hero */
+  .hero {
+    padding: 10px;
+  }
+
+  /* Ajustes na seção Features */
+  .features {
+    padding: 1rem;
+  }
+
+  .feature-box {
+    padding: 1rem;
+  }
+
+  /* Ajustes no Main Content */
+  .main-content {
+    padding: 1rem;
+  }
+
+  .intro h1 {
+    font-size: 1.8rem;
+  }
+
+  /* Ajustes na seção BookService */
+  .BookService {
+    padding: 1rem;
+  }
+
+  /* Ajustes na seção PetCareServices */
+  .PetCareServices {
+    padding: 10px;
+  }
+
+  .card {
+    padding: 10px;
+  }
+
+  .number1, .number2, .number3, .number4 {
+    font-size: 48px;
+  }
+
+  /* Ajustes no Footer */
+  .footer {
+    padding: 20px 10px;
+  }
 }
