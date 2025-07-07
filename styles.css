@@ -22,6 +22,8 @@ img {
   justify-content: space-between;
   align-items: center;
   padding: 10px 10px; /* Reduzi o padding lateral */
+    max-width: 1000px; /* Reduzi o max-width para aproximar mais do centro */
+    margin: 0 auto;
 }
 
 .navbar__logo {
@@ -39,7 +41,6 @@ img {
   justify-content: space-between;
   align-items: center;
   flex: 1;
-  max-width: 1000px; /* Reduzi o max-width para aproximar mais do centro */
   margin: 0 auto;
 }
 
