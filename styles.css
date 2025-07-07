@@ -787,6 +787,7 @@ p {
   .BookService {
     flex-direction: column;
     padding: 1rem;
+    margin-bottom: 20px;
   }
 
   .img-bookservice {
@@ -803,6 +804,7 @@ p {
     width: 100%;
     text-align: center;
     margin: 0;
+    margin-bottom: 30px;
   }
 
   /* Ajustes na seção PetCareServices */
