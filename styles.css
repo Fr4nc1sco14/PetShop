@@ -211,7 +211,7 @@ p {
   background-color: #3fb1ab;
   border-radius: 50%;
   display: flex;
-  margin-left: 100px;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   font-size: 30px;
@@ -224,7 +224,7 @@ p {
   background-color: #ff901a;
   border-radius: 50%;
   display: flex;
-  margin-left: 100px;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   font-size: 30px;
@@ -237,7 +237,7 @@ p {
   background-color: #f17d86;
   border-radius: 50%;
   display: flex;
-  margin-left: 100px;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   font-size: 30px;
@@ -250,7 +250,7 @@ p {
   background-color: #fab756;
   border-radius: 50%;
   display: flex;
-  margin-left: 100px;
+  margin: 0 auto;
   align-items: center;
   justify-content: center;
   font-size: 30px;
@@ -351,7 +351,7 @@ p {
 .stats {
   flex: 1;
   margin-bottom: 100px;
-  margin-right: 100px;
+  margin: 0 auto;
   position: relative;
   max-width: 600px;
 }
