@@ -1,10 +1,19 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
+* {
+  box-sizing: border-box;
+}
+
 body {
   font-family: 'Poppins', sans-serif;
   background-color: #fff9f1;
   margin: 0;
   padding: 0;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 .navbar {
@@ -23,7 +32,7 @@ body {
 }
 
 .logo__image {
-  width: 120px;      
+  width: 120px;
   height: auto;
 }
 
@@ -122,7 +131,7 @@ body {
 }
 
 .subtitle {
-  font-family:"Poppins", sans-serif;
+  font-family: "Poppins", sans-serif;
   color: #3fb1ab;
   text-transform: uppercase;
   font-size: 14px;
@@ -173,7 +182,6 @@ p {
   cursor: pointer;
   color: #F5A623;
 }
-
 
 /* Seção Features */
 .features {
@@ -304,9 +312,18 @@ p {
   overflow: hidden;
   box-shadow: 0 4px 12px rgba(0,0,0,0.1);
 }
-.accordion-item1 { border-top: 3px solid #3fb1ab; }
-.accordion-item2 { border-top: 3px solid #e8ba5d; }
-.accordion-item3 { border-top: 3px solid #E65C50; }
+
+.accordion-item1 {
+  border-top: 3px solid #3fb1ab;
+}
+
+.accordion-item2 {
+  border-top: 3px solid #e8ba5d;
+}
+
+.accordion-item3 {
+  border-top: 3px solid #E65C50;
+}
 
 .accordion-header {
   background: #f0f0f0;
@@ -315,6 +332,7 @@ p {
   font-weight: 600;
   position: relative;
 }
+
 .accordion-header::after {
   content: "\f078";
   font-family: "Font Awesome 6 Free";
@@ -323,7 +341,11 @@ p {
   right: 1.5rem;
   transition: transform 0.3s;
 }
-.accordion-header.active::after { transform: rotate(180deg); }
+
+.accordion-header.active::after {
+  transform: rotate(180deg);
+}
+
 .accordion-content {
   display: none;
   padding: 1rem 1.5rem;
@@ -340,11 +362,13 @@ p {
   position: relative;
   max-width: 600px;
 }
+
 .stats img {
   width: 100%;
   display: block;
   border-radius: 12px;
 }
+
 .stat-box {
   position: absolute;
   background: #fff;
@@ -354,10 +378,12 @@ p {
   text-align: center;
   min-width: 140px;
 }
+
 .stat-box h2 {
   margin: 0;
   font-size: 2rem;
 }
+
 .stat-box p {
   margin: 0.5rem 0 0;
   font-size: 1rem;
@@ -370,6 +396,7 @@ p {
   right: 90%;
   color: #E65C50;
 }
+
 .stat-2 {
   bottom: 10%;
   right: -10%;
@@ -407,7 +434,6 @@ p {
 .bookservice-text h1 {
   color: #ffffff;
 }
-
 
 .PetCareServices {
   width: 100%;
@@ -453,10 +479,21 @@ p {
 }
 
 /* Posicionamento no grid */
-.card.top-left     { grid-area: top-left;     }
-.card.top-right    { grid-area: top-right;    }
-.card.bottom-left  { grid-area: bottom-left;  }
-.card.bottom-right { grid-area: bottom-right; }
+.card.top-left {
+  grid-area: top-left;
+}
+
+.card.top-right {
+  grid-area: top-right;
+}
+
+.card.bottom-left {
+  grid-area: bottom-left;
+}
+
+.card.bottom-right {
+  grid-area: bottom-right;
+}
 
 /* Números dos cards */
 .number1,
@@ -468,10 +505,21 @@ p {
   margin-right: 20px;
 }
 
-.number1 { color: #3fb1ab; }
-.number2 { color: #ff901a; }
-.number3 { color: #f17d86; }
-.number4 { color: #fab756; }
+.number1 {
+  color: #3fb1ab;
+}
+
+.number2 {
+  color: #ff901a;
+}
+
+.number3 {
+  color: #f17d86;
+}
+
+.number4 {
+  color: #fab756;
+}
 
 /* Conteúdo de texto dentro dos cards */
 .text-content h2 {
@@ -490,7 +538,7 @@ p {
 /* Imagem central */
 .center-image {
   grid-area: img;
-  width: 600px; /* ajusta ao teu gosto */
+  width: 600px;
   height: auto;
 }
 
@@ -544,7 +592,7 @@ p {
 /* Coluna 2 Mapa */
 .footer__map {
   position: relative;
-  padding-bottom: 75%; /* Proporção 4:3 */
+  padding-bottom: 75%;
   height: 0;
   overflow: hidden;
 }
@@ -629,7 +677,7 @@ p {
     margin-left: 0;
   }
 
-.navbar__menu {
+  .navbar__menu {
     display: none;
     position: absolute;
     top: 60px;
@@ -699,7 +747,10 @@ p {
     margin-bottom: 20px;
   }
 
-  .feature-icon1, .feature-icon2, .feature-icon3, .feature-icon4 {
+  .feature-icon1,
+  .feature-icon2,
+  .feature-icon3,
+  .feature-icon4 {
     margin-left: auto;
     margin-right: auto;
   }
@@ -765,7 +816,8 @@ p {
     align-items: center;
   }
 
-  .card, .center-image {
+  .card,
+  .center-image {
     width: 100%;
     max-width: 300px;
     margin-bottom: 20px;
@@ -788,7 +840,7 @@ p {
   }
 
   .footer__map {
-    padding-bottom: 50%; /* Mantém proporção do mapa */
+    padding-bottom: 50%;
   }
 
   /* Ajustes de fontes */
@@ -867,12 +919,50 @@ p {
     padding: 10px;
   }
 
-  .number1, .number2, .number3, .number4 {
+  .number1,
+  .number2,
+  .number3,
+  .number4 {
     font-size: 48px;
   }
 
   /* Ajustes no Footer */
   .footer {
     padding: 20px 10px;
+    width: 100%;
+  }
+}
+
+/* Media query para telas muito pequenas (max-width: 320px) */
+@media (max-width: 320px) {
+  .navbar {
+    padding: 5px 10px;
+  }
+
+  .logo__image {
+    width: 60px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+
+  .btn {
+    padding: 8px 16px;
+  }
+
+  .feature-box {
+    padding: 1rem;
+  }
+
+  .card {
+    padding: 5px;
+  }
+
+  .number1,
+  .number2,
+  .number3,
+  .number4 {
+    font-size: 36px;
   }
 }
