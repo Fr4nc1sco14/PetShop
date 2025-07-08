@@ -660,27 +660,34 @@ p {
     padding: 15px;
   }
 
-  .navbar__menu {
-    display: none;
-    position: absolute;
-    top: 60px;
-    left: 0;
-    width: 100%;
-    background-color: #fff9f1;
-    flex-direction: column;
-    align-items: center;
-    padding: 20px 0;
-    z-index: 1000;
-    opacity: 0;
-    transform: translateY(-20px);
-    transition: opacity 0.3s ease, transform 0.3s ease;
-  }
+.navbar__menu {
+  display: flex;              /* sempre flex para o transition funcionar */
+  position: absolute;
+  top: 60px;
+  left: 0;
+  width: 100%;
+  background-color: #fff9f1;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px 0;
+  z-index: 1000;
 
-  .navbar__menu--open {
-    display: flex;
-    opacity: 1;
-    transform: translateY(0);
-  }
+  /* escondido inicialmente */
+  opacity: 0;
+  transform: translateY(-20px);
+  pointer-events: none;
+
+  /* animação de slide + fade */
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.navbar__menu--open {
+  /* slide + fade in */
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
 
   .nav__list {
     flex-direction: column;
