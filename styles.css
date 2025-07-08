@@ -70,6 +70,7 @@ img {
 .navbar__contact {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .contact__icon--circle {
@@ -155,7 +156,8 @@ p {
   margin-bottom: 20px;
 }
 
-.btn {
+.btn { padding: 30px;
+  text-decoration: none;
   background-color: #f17d86;
   font-weight: 600;
   font-family: 'Poppins', sans-serif;
@@ -594,6 +596,13 @@ p {
   font-size: 16px;
   font-weight: 600;
   text-align: center;
+}
+
+.footer__col--map p {
+  display: flex;
+  align-items: center;
+  text-align: center;
+  color: #fff;
 }
 
 .footer__col--hours h4 {
