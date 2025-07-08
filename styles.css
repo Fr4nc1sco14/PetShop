@@ -709,6 +709,7 @@ p {
   .hero_content {
     max-width: 100%;
     text-align: center;
+    margin-bottom: 40px;
   }
 
   .features {
@@ -822,6 +823,7 @@ p {
   .bookservice-text {
     width: 100%;
     text-align: center;
+    margin-bottom: 40px;
   }
 
   .services-container {
