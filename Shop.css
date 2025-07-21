@@ -47,11 +47,12 @@
   flex-direction: column;
   align-items: center;
   width: 220px;
-  /* o background-color agora vem inline ou pode ser movido pra cá se preferir classes específicas */
   border-radius: 12px;
   padding: 20px;
   box-shadow: 0 0 10px rgba(0,0,0,0.05);
   transition: transform 0.2s;
+  text-decoration: none;
+  color: inherit;
 }
 
 .category-item:hover {
@@ -77,5 +78,109 @@
   font-size: 16px;
   font-weight: 600;
   color: #333;
+}
+
+
+
+
+
+
+
+
+.produtos-por-animal {
+  padding: 40px 20px;
+}
+
+.produtos-por-animal .cards-container {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.produtos-por-animal .card {
+  display: flex;
+  align-items: center;
+  width: 370px;
+  min-height: 150px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  transition: transform .2s ease;
+}
+.produtos-por-animal .card:hover {
+  transform: translateY(-5px);
+}
+
+.produtos-por-animal .card-image {
+  width: 170px;
+  height: 170px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-right: 20px;
+  flex-shrink: 0;
+}
+
+.produtos-por-animal .text-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  flex: 1;
+}
+
+.produtos-por-animal .card-text-small {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  color: #000;
+}
+
+.produtos-por-animal .card-text-large {
+  font-size: 20px;
+  font-weight: bold;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+  color: #000;
+}
+
+.produtos-por-animal .card-button {
+  align-self: flex-start;
+  padding: 8px 16px;
+  font-size: 12px;
+  font-weight: bold;
+  border: none;
+  border-radius: 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: opacity .2s ease;
+}
+.produtos-por-animal .card-button:hover {
+  opacity: 0.9;
+}
+
+/* cores específicas */
+.produtos-por-animal .card-dog {
+  background-color: #F5A623;
+  color: #fff;
+}
+.produtos-por-animal .card-dog .card-button {
+  background-color: #E67E22;
+}
+
+.produtos-por-animal .card-cat {
+  background-color: #FFF5E6;
+  color: #F5A623;
+}
+.produtos-por-animal .card-cat .card-button {
+  background-color: #F5A623;
+}
+
+.produtos-por-animal .card-bird {
+  background-color: #E6E6FA;
+  color: #6A5ACD;
+}
+.produtos-por-animal .card-bird .card-button {
+  background-color: #6A5ACD;
 }
 
