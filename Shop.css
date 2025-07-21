@@ -1,0 +1,81 @@
+/* SECOUND PAGE START */
+
+.Shop-Title {
+  width: 100%;
+  height: auto;
+  background-color: #ff901a;
+}
+
+.Shop-Title h1{
+  color: white;
+  font-size: 30px;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+
+
+
+
+.categories-section {
+  text-align: center;
+  padding: 40px 20px;
+  font-family: Arial, sans-serif;
+}
+
+.categories-section h2 {
+  font-size: 24px;
+  margin-bottom: 30px;
+  color: #ff901a;
+}
+
+.categories-section .highlight {
+  color: #000;
+  font-weight: bold;
+}
+
+.categories-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: nowrap; /* garante sempre 5 na mesma linha */
+}
+
+.category-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 220px;
+  /* o background-color agora vem inline ou pode ser movido pra cá se preferir classes específicas */
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s;
+}
+
+.category-item:hover {
+  transform: translateY(-5px);
+}
+
+.category-card {
+  width: 140px;
+  height: 140px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.category-card img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+.category-label {
+  margin-top: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
