@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "nome": "Ração Seca Premium para Cão Adulto",
+    "preço": 24.99,
+    "familia": "cão",
+    "marca": "DogPlus",
+    "descrição": "Ração seca completa para cães adultos de todas as raças.",
+    "imagem": "RaçãoCão.png"
+  },
+  {
+    "id": 2,
+    "nome": "Ração Húmida Gourmet para Gato",
+    "preço": 1.99,
+    "familia": "gato",
+    "marca": "CatGourmet",
+    "descrição": "Alimento húmido com sabor a salmão para gatos exigentes.",
+    "imagem": "RaçãoGato.png"
+  },
+  {
+    "id": 3,
+    "nome": "Bola de Borracha Resistente para Cão",
+    "preço": 8.50,
+    "familia": "cão",
+    "marca": "BrinquaCão",
+    "descrição": "Brinquedo durável ideal para cães que adoram mastigar.",
+    "imagem": "BrinquedoCão.png"
+  },
+  {
+    "id": 4,
+    "nome": "Varinha com Penas para Gato",
+    "preço": 4.20,
+    "familia": "gato",
+    "marca": "MiauToys",
+    "descrição": "Varinha interativa com penas coloridas para gatos ativos.",
+    "imagem": "BrinquedoGato.png"
+  }
+]

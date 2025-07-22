@@ -14,10 +14,6 @@
   text-align: center;
 }
 
-
-
-
-
 .categories-section {
   text-align: center;
   padding: 40px 20px;
@@ -79,13 +75,6 @@
   font-weight: 600;
   color: #333;
 }
-
-
-
-
-
-
-
 
 .produtos-por-animal {
   padding: 40px 20px;
@@ -184,14 +173,12 @@
   background-color: #6A5ACD;
 }
 
-
-
-
-
 .Shop-Products {
   text-align: center;
   padding: 40px 20px;
   font-family: Arial, sans-serif;
+  width: 100%;
+  height: auto;
 }
 
 .Shop-Products h2 {
@@ -206,6 +193,54 @@
 }
 
 .Shop-Products-Items {
-  width: 100%;
-  height: 600px;
+  display: grid;
+  grid-template-columns: repeat(4, 280px);
+  gap: 20px;
+  padding: 20px;
+  justify-content: center;
+}
+
+
+
+.product-card {
+  width: 280px;
+  background-color: #ffffff;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  padding: 20px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: center;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+  width: 170px;
+  height: 200px;
+  margin: 0 auto 15px;
+  border-radius: 8px;
+  object-fit: cover;
+}
+
+.text-section {
+  padding: 0 10px;
+}
+
+.product-name {
+  font-family: 'Arial', sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 10px;
+}
+
+.price {
+  font-family: 'Arial', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ff901a;
+  margin: 0;
 }
