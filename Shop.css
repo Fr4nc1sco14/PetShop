@@ -62,6 +62,14 @@
   box-sizing: border-box;
 }
 
+.filter-group span {
+  color: #ff901a;
+} 
+
+#FaixaPreco {
+  margin-top: 30px;
+}
+
 .sort-group {
   display: flex;
   flex-direction: column;
