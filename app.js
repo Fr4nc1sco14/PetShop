@@ -44,14 +44,21 @@ document.addEventListener('DOMContentLoaded', function() {
     const end = start + itemsPerPage;
     const pageItems = filteredProducts.slice(start, end);
 
-    pageItems.forEach(product => {
+    pageItems.forEach((product, index) => {
       const productCard = document.createElement('div');
       productCard.classList.add('product-card');
+      productCard.style.animationDelay = `${index * 0.1}s`; // Animação opcional
 
+      // Contêiner da imagem para efeito de sobreposição
+      const imgContainer = document.createElement('div');
+      imgContainer.classList.add('img-container');
       const img = document.createElement('img');
       img.src = `../images/${product.imagem}`;
       img.alt = product.nome;
+      imgContainer.appendChild(img);
+      productCard.appendChild(imgContainer);
 
+      // Seção de texto
       const textSection = document.createElement('div');
       textSection.classList.add('text-section');
 
@@ -59,14 +66,40 @@ document.addEventListener('DOMContentLoaded', function() {
       productName.classList.add('product-name');
       productName.textContent = product.nome;
 
+      // Adicionando descrição (assumindo que existe um campo 'descricao')
+      const description = document.createElement('p');
+      description.classList.add('product-description');
+      description.textContent = product.descrição || 'Descrição indisponível';
+
       const price = document.createElement('p');
       price.classList.add('price');
       price.textContent = `${product.preço}€`;
 
       textSection.appendChild(productName);
+      textSection.appendChild(description);
       textSection.appendChild(price);
-      productCard.appendChild(img);
       productCard.appendChild(textSection);
+
+      // Adicionando botão
+      const button = document.createElement('button');
+      button.classList.add('product-button');
+      button.textContent = 'Ver Detalhes';
+      productCard.appendChild(button);
+
+      // Adicionando badges (exemplo condicional)
+      if (product.isNew) {
+        const badge = document.createElement('span');
+        badge.classList.add('badge', 'new');
+        badge.textContent = 'Novo';
+        productCard.appendChild(badge);
+      }
+      if (product.isOnSale) {
+        const badge = document.createElement('span');
+        badge.classList.add('badge', 'sale');
+        badge.textContent = 'Promoção';
+        productCard.appendChild(badge);
+      }
+
       productsContainer.appendChild(productCard);
     });
   }
@@ -121,12 +154,11 @@ document.addEventListener('DOMContentLoaded', function() {
       const matchesCategoria = selectedCategoria === 'all' || product.categoria === selectedCategoria;
       const matchesMarca = selectedMarca === 'all' || product.marca === selectedMarca;
       const matchesPrice = product.preço <= maxPrice;
-      const matchesStock = stockFilter === 'all' || (stockFilter === 'in-stock' && true); // Assuming all are in stock
+      const matchesStock = stockFilter === 'all' || (stockFilter === 'in-stock' && true);
 
       return matchesSearch && matchesFamilia && matchesCategoria && matchesMarca && matchesPrice && matchesStock;
     });
 
-    // Sort products
     if (sortFilter === 'price-asc') {
       filteredProducts.sort((a, b) => a.preço - b.preço);
     } else if (sortFilter === 'price-desc') {
