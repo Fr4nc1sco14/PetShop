@@ -6,7 +6,8 @@
     "familia": "cão",
     "marca": "DogPlus",
     "descrição": "Ração seca completa para cães adultos de todas as raças.",
-    "imagem": "RaçãoCão.png"
+    "imagem": "RaçãoCão.png",
+    "categoria": "racao-cao"
   },
   {
     "id": 2,
@@ -15,7 +16,8 @@
     "familia": "gato",
     "marca": "CatGourmet",
     "descrição": "Alimento húmido com sabor a salmão para gatos exigentes.",
-    "imagem": "RaçãoGato.png"
+    "imagem": "RaçãoGato.png",
+    "categoria": "racao-gato"
   },
   {
     "id": 3,
@@ -24,7 +26,8 @@
     "familia": "cão",
     "marca": "BrinquaCão",
     "descrição": "Brinquedo durável ideal para cães que adoram mastigar.",
-    "imagem": "BrinquedoCão.png"
+    "imagem": "BrinquedoCão.png",
+    "categoria": "brinquedos-cao"
   },
   {
     "id": 4,
@@ -33,7 +36,8 @@
     "familia": "gato",
     "marca": "MiauToys",
     "descrição": "Varinha interativa com penas coloridas para gatos ativos.",
-    "imagem": "BrinquedoGato.png"
+    "imagem": "BrinquedoGato.png",
+    "categoria": "brinquedos-gato"
   },
   {
     "id": 5,
@@ -42,7 +46,8 @@
     "familia": "cão",
     "marca": "DogFit",
     "descrição": "Coleira em nylon resistente com guia incorporada, ajustável a várias raças.",
-    "imagem": "ColeiraCao.png"
+    "imagem": "ColeiraCao.png",
+    "categoria": "suplementos"
   },
   {
     "id": 6,
@@ -51,7 +56,8 @@
     "familia": "cão",
     "marca": "ConfortPaw",
     "descrição": "Cama com espuma de memória para apoio das articulações de cães séniores e adultos.",
-    "imagem": "CamaCao.png"
+    "imagem": "CamaCao.png",
+    "categoria": "suplementos"
   },
   {
     "id": 7,
@@ -60,7 +66,8 @@
     "familia": "cão",
     "marca": "PetCare",
     "descrição": "Shampoo hipoalergénico, suave para a pele e pêlo dos cães, sem fragrâncias fortes.",
-    "imagem": "ChampôCão.png"
+    "imagem": "ChampôCão.png",
+    "categoria": "suplementos"
   },
   {
     "id": 8,
@@ -69,7 +76,8 @@
     "familia": "cão",
     "marca": "DentalPlay",
     "descrição": "Osso para higiene dental e entretenimento, ajuda a reduzir tártaro e placa.",
-    "imagem": "OssoCao.png"
+    "imagem": "OssoCao.png",
+    "categoria": "suplementos"
   },
   {
     "id": 9,
@@ -78,7 +86,8 @@
     "familia": "cão",
     "marca": "SafeWalk",
     "descrição": "Coleira LED recarregável para maior visibilidade nos passeios ao anoitecer.",
-    "imagem": "ColeiraLuminosaCao.png"
+    "imagem": "ColeiraLuminosaCao.png",
+    "categoria": "suplementos"
   },
   {
     "id": 10,
@@ -87,7 +96,8 @@
     "familia": "cão",
     "marca": "EasyWalk",
     "descrição": "Peitoral ergonómico que distribui a pressão uniformemente sem desconforto.",
-    "imagem": "PeitoralCao.png"
+    "imagem": "PeitoralCao.png",
+    "categoria": "suplementos"
   },
   {
     "id": 11,
@@ -96,7 +106,8 @@
     "familia": "gato",
     "marca": "CatClimb",
     "descrição": "Arranhador em sisal com duas plataformas para conforto e diversão dos felinos.",
-    "imagem": "ArranhadorGato.png"
+    "imagem": "ArranhadorGato.png",
+    "categoria": "brinquedos-gato"
   },
   {
     "id": 12,
@@ -105,7 +116,8 @@
     "familia": "gato",
     "marca": "FreshPurr",
     "descrição": "Spray para estimular a hidratação do gato, com sabor natural e sem aditivos.",
-    "imagem": "AguaGato.png"
+    "imagem": "AguaGato.png",
+    "categoria": "suplementos"
   },
   {
     "id": 13,
@@ -114,7 +126,8 @@
     "familia": "gato",
     "marca": "MiauRelax",
     "descrição": "Cama acolchoada em formato de ninho, proporciona sensação de segurança.",
-    "imagem": "CamaGato.png"
+    "imagem": "CamaGato.png",
+    "categoria": "suplementos"
   },
   {
     "id": 14,
@@ -123,7 +136,8 @@
     "familia": "gato",
     "marca": "BellCat",
     "descrição": "Coleira suave com sininho para reduzir predação de pequenos animais.",
-    "imagem": "ColeiraGato.png"
+    "imagem": "ColeiraGato.png",
+    "categoria": "suplementos"
   },
   {
     "id": 15,
@@ -132,7 +146,8 @@
     "familia": "gato",
     "marca": "CeramiPet",
     "descrição": "Comedouro elevado e antiderrapante, fácil de limpar e ideal para postura saudável.",
-    "imagem": "ComedouroGato.png"
+    "imagem": "ComedouroGato.png",
+    "categoria": "suplementos"
   },
   {
     "id": 16,
@@ -141,7 +156,8 @@
     "familia": "gato",
     "marca": "PlayLight",
     "descrição": "Dispositivo automático com luzes coloridas para estimular o instinto de caça.",
-    "imagem": "BrinquedoInterativoGato.png"
+    "imagem": "BrinquedoInterativoGato.png",
+    "categoria": "brinquedos-gato"
   },
   {
     "id": 17,
@@ -150,7 +166,8 @@
     "familia": "aves",
     "marca": "WoodPlay",
     "descrição": "Brinquedo feito em madeira natural, com peças coloridas e texturas variadas para estimular o bicar e o brincar das aves.",
-    "imagem": "BrinquedoAve.png"
+    "imagem": "BrinquedoAve.png",
+    "categoria": "suplementos"
   },
   {
     "id": 18,
@@ -159,7 +176,8 @@
     "familia": "aves",
     "marca": "AquaBird",
     "descrição": "Bebedouro que garante fluxo constante de água limpa, fácil de montar na gaiola.",
-    "imagem": "BebedouroAve.png"
+    "imagem": "BebedouroAve.png",
+    "categoria": "suplementos"
   },
   {
     "id": 19,
@@ -168,7 +186,8 @@
     "familia": "aves",
     "marca": "SandBath",
     "descrição": "Areia fina especial para banho e higiene das aves, ajuda na remoção de oleosidade.",
-    "imagem": "AreiaAves.png"
+    "imagem": "AreiaAves.png",
+    "categoria": "suplementos"
   },
   {
     "id": 20,
@@ -177,6 +196,7 @@
     "familia": "aves",
     "marca": "PerchLife",
     "descrição": "Poleiro de madeira variada, ideal para exercitar as patas e unhas das aves.",
-    "imagem": "PoleiroAves.png"
+    "imagem": "PoleiroAves.png",
+    "categoria": "suplementos"
   }
 ]

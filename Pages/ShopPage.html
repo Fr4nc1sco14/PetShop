@@ -4,27 +4,20 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Zoomies</title>
-  <!-- Image aba -->
-   <link rel="icon" type="image/png" href="../images/logo.png" />
-
-  <!-- Google Font -->
+  <link rel="icon" type="image/png" href="../images/logo.png" />
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
-  <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
   <link rel="stylesheet" href="../styles.css" />
   <link rel="stylesheet" href="../Shop.css">
 </head>
 <body>
-
 <header class="navbar">
     <div class="navbar__logo">
         <img src="../images/logo.png" alt="Logo" class="logo__image">
     </div>
-
     <div class="menu-toggle">
       <i class="fa-solid fa-bars"></i>
     </div>
-
     <div class="navbar__menu">
       <nav class="navbar__nav">
         <ul class="nav__list">
@@ -36,97 +29,107 @@
           <li class="nav__item"><a href="#contacte-nos">Contacte-nos</a></li>
         </ul>
       </nav>
-
       <a href="tel:253632001" class="navbar__contact">
-  <div class="contact__icon contact__icon--circle">
-    <i class="fa-solid fa-phone-volume"></i>
-  </div>
-  <div class="contact__text">
-    <span>Contacte-nos</span>
-    <strong>253 632 001</strong>
-  </div>
-</a>
-
+        <div class="contact__icon contact__icon--circle">
+          <i class="fa-solid fa-phone-volume"></i>
+        </div>
+        <div class="contact__text">
+          <span>Contacte-nos</span>
+          <strong>253 632 001</strong>
+        </div>
+      </a>
     </div>
-  </header>
+</header>
 
 <section class="Shop-Title"><h1>Loja</h1></section>
 
-<section class="categories-section">
-  <h2>Top <span class="highlight">Categorias</span></h2>
-  <div class="categories-container">
-    <a href="/produtos/racao-gato" class="category-item" style="background-color: #fff4e6;">
-      <div class="category-card">
-        <img src="../images/RaçãoGato.png" alt="Ração Gato">
-      </div>
-      <p class="category-label">Ração Gato</p>
-    </a>
-    <a href="/produtos/brinquedos-gato" class="category-item" style="background-color: #e6f7ff;">
-      <div class="category-card">
-        <img src="../images/BrinquedoGato.png" alt="Brinquedos Gato">
-      </div>
-      <p class="category-label">Brinquedos Gato</p>
-    </a>
-    <a href="/produtos/racao-cao" class="category-item" style="background-color: #f0fff4;">
-      <div class="category-card">
-        <img src="../images/RaçãoCão.png" alt="Ração Cão">
-      </div>
-      <p class="category-label">Ração Cão</p>
-    </a>
-    <a href="/produtos/brinquedos-cao" class="category-item" style="background-color: #f9e6ff;">
-      <div class="category-card">
-        <img src="../images/BrinquedoCão.png" alt="Brinquedos Cão">
-      </div>
-      <p class="category-label">Brinquedos Cão</p>
-    </a>
-    <a href="/produtos/suplementos" class="category-item" style="background-color: #fff9e6;">
-      <div class="category-card">
-        <img src="../images/Suplementos.png" alt="Suplementos">
-      </div>
-      <p class="category-label">Suplementos</p>
-    </a>
+<section class="filters">
+  <div class="filter-toggle">
+    <i class="fa-solid fa-filter"></i>
   </div>
-</section>
-
-<section class="produtos-por-animal">
-  <div class="cards-container">
-    <div class="card card-dog">
-      <img src="../images/CãoCard.png" class="card-image" alt="Cão">
-      <div class="text-container">
-        <p class="card-text-small">PRODUTOS PARA CÃO</p>
-        <p class="card-text-large">Bem-estar e cuidados</p>
-        <button class="card-button">Ver mais</button>
-      </div>
+  <div class="filter-menu">
+    <h3>Filtros</h3>
+    <div class="filter-group">
+      <label for="searchFilter">Pesquisar:</label>
+      <input type="text" id="searchFilter" placeholder="Nome do produto...">
     </div>
-    <div class="card card-cat">
-      <img src="../images/GatoCard.png" class="card-image" alt="Gato">
-      <div class="text-container">
-        <p class="card-text-small">PRODUTOS PARA GATO</p>
-        <p class="card-text-large">Mimos e higiene</p>
-        <button class="card-button">Explorar</button>
-      </div>
+    <div class="filter-group">
+      <label for="familiaFilter">Família:</label>
+      <select id="familiaFilter">
+        <option value="all">Todas</option>
+        <option value="cão">Cão</option>
+        <option value="gato">Gato</option>
+        <option value="aves">Aves</option>
+      </select>
     </div>
-    <div class="card card-bird">
-      <img src="../images/cockatooCard.png" class="card-image" alt="Ave">
-      <div class="text-container">
-        <p class="card-text-small">PRODUTOS PARA AVES</p>
-        <p class="card-text-large">Acessórios e conforto</p>
-        <button class="card-button">Ver opções</button>
-      </div>
+    <div class="filter-group">
+      <label for="categoriaFilter">Categoria:</label>
+      <select id="categoriaFilter">
+        <option value="all">Todas</option>
+        <option value="racao-cao">Ração Cão</option>
+        <option value="racao-gato">Ração Gato</option>
+        <option value="brinquedos-cao">Brinquedos Cão</option>
+        <option value="brinquedos-gato">Brinquedos Gato</option>
+        <option value="suplementos">Suplementos</option>
+      </select>
     </div>
+    <div class="filter-group">
+      <label for="marcaFilter">Marca:</label>
+      <select id="marcaFilter">
+        <option value="all">Todas</option>
+        <option value="DogPlus">DogPlus</option>
+        <option value="CatGourmet">CatGourmet</option>
+        <option value="BrinquaCão">BrinquaCão</option>
+        <option value="MiauToys">MiauToys</option>
+        <option value="DogFit">DogFit</option>
+        <option value="ConfortPaw">ConfortPaw</option>
+        <option value="PetCare">PetCare</option>
+        <option value="DentalPlay">DentalPlay</option>
+        <option value="SafeWalk">SafeWalk</option>
+        <option value="EasyWalk">EasyWalk</option>
+        <option value="CatClimb">CatClimb</option>
+        <option value="FreshPurr">FreshPurr</option>
+        <option value="MiauRelax">MiauRelax</option>
+        <option value="BellCat">BellCat</option>
+        <option value="CeramiPet">CeramiPet</option>
+        <option value="PlayLight">PlayLight</option>
+        <option value="WoodPlay">WoodPlay</option>
+        <option value="AquaBird">AquaBird</option>
+        <option value="SandBath">SandBath</option>
+        <option value="PerchLife">PerchLife</option>
+      </select>
+    </div>
+    <div class="filter-group">
+      <label>Faixa de Preço:</label>
+      <input type="range" id="priceFilter" min="0" max="50" value="50">
+      <span id="priceValue">Até 50€</span>
+    </div>
+    <div class="filter-group">
+      <label for="stockFilter">Disponibilidade:</label>
+      <select id="stockFilter">
+        <option value="all">Todos</option>
+        <option value="in-stock">Em Estoque</option>
+      </select>
+    </div>
+  </div>
+  <div class="filter-group sort-group">
+    <label for="sortFilter">Ordenar por:</label>
+    <select id="sortFilter">
+      <option value="none">Nenhum</option>
+      <option value="price-asc">Preço (Crescente)</option>
+      <option value="price-desc">Preço (Decrescente)</option>
+      <option value="name-asc">Nome (A-Z)</option>
+    </select>
   </div>
 </section>
 
 <section class="Shop-Products">
   <h2>Catálogo de <span class="highlight">Produtos</span></h2>
-  <div class="Shop-Products-Items">
-    <!-- Os cards serão inseridos aqui dinamicamente pelo app.js -->
-  </div>
+  <div class="Shop-Products-Items"></div>
 </section>
 
 <footer class="footer">
   <div class="footer__container">
-    <!-- Coluna 1: Logo e Links Rápidos -->
     <div class="footer__col footer__col--links">
       <img src="../images/logo.png" alt="Zoomies Logo" class="footer__logo">
       <ul class="footer__links">
@@ -137,8 +140,6 @@
         <li><a href="#contactos">Contacte-nos</a></li>
       </ul>
     </div>
-
-    <!-- Coluna 2: Mapa -->
     <div class="footer__col footer__col--map">
       <h4>Encontre-nos</h4>
       <div class="footer__map">
@@ -146,8 +147,6 @@
       </div>
       <p>R. Paixão Bastos 163, 4830-551 Póvoa de Lanhoso</p>
     </div>
-
-    <!-- Coluna 3: Horário de Funcionamento -->
     <div class="footer__col footer__col--hours">
       <h4>Horário de Funcionamento</h4>
       <p>Seg: 14:30 – 19:00</p>
@@ -155,8 +154,6 @@
       <p>Sáb: 10:00 – 14:00</p>
       <p>Dom: Encerrado</p>
     </div>
-
-    <!-- Coluna 4: Redes Sociais em Coluna -->
     <div class="footer__col footer__col--social">
       <h4>Siga-nos</h4>
       <ul class="footer__social-list">

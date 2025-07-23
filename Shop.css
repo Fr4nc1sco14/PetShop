@@ -1,176 +1,81 @@
-/* SECOUND PAGE START */
-
 .Shop-Title {
   width: 100%;
   height: auto;
   background-color: #ff901a;
 }
 
-.Shop-Title h1{
+.Shop-Title h1 {
   color: white;
   font-size: 30px;
   justify-content: center;
   align-items: center;
   text-align: center;
+  padding: 20px 0;
 }
 
-.categories-section {
+.filters {
+  padding: 20px;
+  background-color: #fff9f1;
+  border-bottom: 1px solid #fff9f1;
   text-align: center;
-  padding: 40px 20px;
-  font-family: Arial, sans-serif;
+  position: relative;
 }
 
-.categories-section h2 {
-  font-size: 30px;
-  margin-bottom: 30px;
-  color: #ff901a;
-}
-
-.categories-section .highlight {
-  color: #000;
-  font-weight: bold;
-}
-
-.categories-container {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: nowrap; /* garante sempre 5 na mesma linha */
-}
-
-.category-item {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 220px;
-  border-radius: 12px;
-  padding: 20px;
-  box-shadow: 0 0 10px rgba(0,0,0,0.05);
-  transition: transform 0.2s;
-  text-decoration: none;
-  color: inherit;
-}
-
-.category-item:hover {
-  transform: translateY(-5px);
-}
-
-.category-card {
-  width: 140px;
-  height: 140px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.category-card img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-}
-
-.category-label {
-  margin-top: 12px;
-  font-size: 16px;
-  font-weight: 600;
-  color: #333;
-}
-
-.produtos-por-animal {
-  padding: 40px 20px;
-}
-
-.produtos-por-animal .cards-container {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
-.produtos-por-animal .card {
-  display: flex;
-  align-items: center;
-  width: 370px;
-  min-height: 150px;
-  padding: 20px;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
-  transition: transform .2s ease;
-}
-.produtos-por-animal .card:hover {
-  transform: translateY(-5px);
-}
-
-.produtos-por-animal .card-image {
-  width: 170px;
-  height: 170px;
-  border-radius: 50%;
-  object-fit: cover;
-  margin-right: 20px;
-  flex-shrink: 0;
-}
-
-.produtos-por-animal .text-container {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  flex: 1;
-}
-
-.produtos-por-animal .card-text-small {
-  font-size: 13px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 6px;
-  color: #000;
-}
-
-.produtos-por-animal .card-text-large {
-  font-size: 20px;
-  font-weight: bold;
-  text-transform: uppercase;
-  margin-bottom: 12px;
-  color: #000;
-}
-
-.produtos-por-animal .card-button {
-  align-self: flex-start;
-  padding: 8px 16px;
-  font-size: 12px;
-  font-weight: bold;
-  border: none;
-  border-radius: 20px;
-  color: #fff;
+.filter-toggle {
+  display: none; /* Escondido por padrão em telas maiores */
+  font-size: 24px;
   cursor: pointer;
-  transition: opacity .2s ease;
-}
-.produtos-por-animal .card-button:hover {
-  opacity: 0.9;
+  color: #ff901a;
+  padding: 10px;
 }
 
-/* cores específicas */
-.produtos-por-animal .card-dog {
-  background-color: #F5A623;
-  color: #fff;
-}
-.produtos-por-animal .card-dog .card-button {
-  background-color: #E67E22;
+.filter-menu {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
 }
 
-.produtos-por-animal .card-cat {
-  background-color: #FFF5E6;
-  color: #F5A623;
-}
-.produtos-por-animal .card-cat .card-button {
-  background-color: #F5A623;
+.filters h3 {
+  font-size: 24px;
+  color: #ff901a;
+  margin-bottom: 20px;
+  width: 100%;
 }
 
-.produtos-por-animal .card-bird {
-  background-color: #E6E6FA;
-  color: #6A5ACD;
+.filter-group {
+  display: inline-block;
+  margin: 0 15px 15px 0;
 }
-.produtos-por-animal .card-bird .card-button {
-  background-color: #6A5ACD;
+
+.filter-group label {
+  font-size: 16px;
+  color: #333;
+  margin-right: 5px;
+}
+
+.filter-group input[type="text"],
+.filter-group select {
+  padding: 8px;
+  font-size: 14px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 200px;
+}
+
+.filter-group input[type="range"] {
+  width: 200px;
+  vertical-align: middle;
+}
+
+.filter-group #priceValue {
+  font-size: 14px;
+  color: #ff901a;
+  margin-left: 10px;
+}
+
+.sort-group {
+  margin: 0 15px;
 }
 
 .Shop-Products {
@@ -199,8 +104,6 @@
   padding: 20px;
   justify-content: center;
 }
-
-
 
 .product-card {
   width: 280px;
@@ -245,8 +148,6 @@
   margin: 0;
 }
 
-
-/* Paginação */
 #pagination {
   display: flex;
   justify-content: center;
@@ -276,4 +177,96 @@
   cursor: default;
   transform: none;
   color: #666;
+}
+
+/* Media query para telas médias (tablets, até 1024px) */
+@media (max-width: 1024px) {
+  .shop-container {
+    display: block; /* Remove o layout flexível */
+  }
+  .filters {
+    width: 100%; /* Filtros ocupam toda a largura */
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .Shop-Products {
+    width: 100%; /* Produtos ocupam toda a largura */
+  }
+  .Shop-Products-Items {
+    grid-template-columns: repeat(3, 280px); /* Reduz para 3 colunas */
+  }
+}
+
+/* Media query para telas pequenas (smartphones, até 768px) */
+@media (max-width: 768px) {
+  .shop-container {
+    display: block;
+  }
+  .filters {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .filter-toggle {
+    display: block; /* Mostrado em telas menores */
+  }
+  .filter-menu {
+    display: none; /* Escondido por padrão em telas menores */
+    position: absolute;
+    top: 60px;
+    left: 0;
+    width: 100%;
+    background-color: #fff9f1;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  .filter-menu.active {
+    display: block; /* Mostrado quando ativo */
+  }
+  .filter-group {
+    display: block; /* Cada grupo de filtro em uma linha */
+    margin: 10px 0;
+  }
+  .sort-group {
+    display: block;
+    margin: 20px 0;
+  }
+  .Shop-Products {
+    width: 100%;
+  }
+  .Shop-Products-Items {
+    grid-template-columns: repeat(2, 280px); /* Reduz para 2 colunas */
+  }
+}
+
+/* Media query para telas muito pequenas (smartphones menores, até 480px) */
+@media (max-width: 480px) {
+  .shop-container {
+    display: block;
+  }
+  .filters {
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #ddd;
+  }
+  .filter-group {
+    display: block; /* Cada grupo de filtro em uma linha */
+    margin: 10px 0;
+  }
+  .filter-group label {
+    display: block;
+    margin-bottom: 5px;
+  }
+  .filter-group input[type="text"],
+  .filter-group select,
+  .filter-group input[type="range"] {
+    width: 100%; /* Inputs ocupam toda a largura */
+  }
+  .Shop-Products {
+    width: 100%;
+  }
+  .Shop-Products-Items {
+    grid-template-columns: 1fr; /* Uma coluna apenas */
+  }
 }
