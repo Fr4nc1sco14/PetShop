@@ -34,5 +34,149 @@
     "marca": "MiauToys",
     "descrição": "Varinha interativa com penas coloridas para gatos ativos.",
     "imagem": "BrinquedoGato.png"
+  },
+  {
+    "id": 5,
+    "nome": "Coleira Ajustável com Guia para Cão",
+    "preço": 15.75,
+    "familia": "cão",
+    "marca": "DogFit",
+    "descrição": "Coleira em nylon resistente com guia incorporada, ajustável a várias raças.",
+    "imagem": "ColeiraCao.png"
+  },
+  {
+    "id": 6,
+    "nome": "Cama Orthopédica para Cão",
+    "preço": 39.90,
+    "familia": "cão",
+    "marca": "ConfortPaw",
+    "descrição": "Cama com espuma de memória para apoio das articulações de cães séniores e adultos.",
+    "imagem": "CamaCao.png"
+  },
+  {
+    "id": 7,
+    "nome": "Shampoo Sem Lágrimas para Cão",
+    "preço": 9.50,
+    "familia": "cão",
+    "marca": "PetCare",
+    "descrição": "Shampoo hipoalergénico, suave para a pele e pêlo dos cães, sem fragrâncias fortes.",
+    "imagem": "ChampôCão.png"
+  },
+  {
+    "id": 8,
+    "nome": "Osso Dental de Nylon para Cão",
+    "preço": 6.20,
+    "familia": "cão",
+    "marca": "DentalPlay",
+    "descrição": "Osso para higiene dental e entretenimento, ajuda a reduzir tártaro e placa.",
+    "imagem": "OssoCao.png"
+  },
+  {
+    "id": 9,
+    "nome": "Coleira Luminosa para Cão",
+    "preço": 12.30,
+    "familia": "cão",
+    "marca": "SafeWalk",
+    "descrição": "Coleira LED recarregável para maior visibilidade nos passeios ao anoitecer.",
+    "imagem": "ColeiraLuminosaCao.png"
+  },
+  {
+    "id": 10,
+    "nome": "Peitoral Anatómico para Cão",
+    "preço": 22.40,
+    "familia": "cão",
+    "marca": "EasyWalk",
+    "descrição": "Peitoral ergonómico que distribui a pressão uniformemente sem desconforto.",
+    "imagem": "PeitoralCao.png"
+  },
+  {
+    "id": 11,
+    "nome": "Arranhador com Plataforma para Gato",
+    "preço": 27.99,
+    "familia": "gato",
+    "marca": "CatClimb",
+    "descrição": "Arranhador em sisal com duas plataformas para conforto e diversão dos felinos.",
+    "imagem": "ArranhadorGato.png"
+  },
+  {
+    "id": 12,
+    "nome": "Água Mineral para Gato em Spray",
+    "preço": 3.80,
+    "familia": "gato",
+    "marca": "FreshPurr",
+    "descrição": "Spray para estimular a hidratação do gato, com sabor natural e sem aditivos.",
+    "imagem": "AguaGato.png"
+  },
+  {
+    "id": 13,
+    "nome": "Cama Ninho para Gato",
+    "preço": 18.65,
+    "familia": "gato",
+    "marca": "MiauRelax",
+    "descrição": "Cama acolchoada em formato de ninho, proporciona sensação de segurança.",
+    "imagem": "CamaGato.png"
+  },
+  {
+    "id": 14,
+    "nome": "Coleira com Sininho para Gato",
+    "preço": 5.99,
+    "familia": "gato",
+    "marca": "BellCat",
+    "descrição": "Coleira suave com sininho para reduzir predação de pequenos animais.",
+    "imagem": "ColeiraGato.png"
+  },
+  {
+    "id": 15,
+    "nome": "Comedouro Elevado em Cerâmica para Gato",
+    "preço": 21.50,
+    "familia": "gato",
+    "marca": "CeramiPet",
+    "descrição": "Comedouro elevado e antiderrapante, fácil de limpar e ideal para postura saudável.",
+    "imagem": "ComedouroGato.png"
+  },
+  {
+    "id": 16,
+    "nome": "Brinquedo Interativo com Luz para Gato",
+    "preço": 11.20,
+    "familia": "gato",
+    "marca": "PlayLight",
+    "descrição": "Dispositivo automático com luzes coloridas para estimular o instinto de caça.",
+    "imagem": "BrinquedoInterativoGato.png"
+  },
+  {
+    "id": 17,
+    "nome": "Brinquedo de Madeira Natural Colorido para Aves",
+    "preço": 7.50,
+    "familia": "aves",
+    "marca": "WoodPlay",
+    "descrição": "Brinquedo feito em madeira natural, com peças coloridas e texturas variadas para estimular o bicar e o brincar das aves.",
+    "imagem": "BrinquedoAve.png"
+  },
+  {
+    "id": 18,
+    "nome": "Bebedouro Automático para Pássaros",
+    "preço": 14.99,
+    "familia": "aves",
+    "marca": "AquaBird",
+    "descrição": "Bebedouro que garante fluxo constante de água limpa, fácil de montar na gaiola.",
+    "imagem": "BebedouroAve.png"
+  },
+  {
+    "id": 19,
+    "nome": "Banho de Areia Mineral para Pássaros",
+    "preço": 7.25,
+    "familia": "aves",
+    "marca": "SandBath",
+    "descrição": "Areia fina especial para banho e higiene das aves, ajuda na remoção de oleosidade.",
+    "imagem": "AreiaAves.png"
+  },
+  {
+    "id": 20,
+    "nome": "Poleiro de Madeira Natural para Pássaros",
+    "preço": 9.80,
+    "familia": "aves",
+    "marca": "PerchLife",
+    "descrição": "Poleiro de madeira variada, ideal para exercitar as patas e unhas das aves.",
+    "imagem": "PoleiroAves.png"
   }
 ]
