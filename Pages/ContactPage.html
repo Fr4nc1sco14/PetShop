@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Zoomies</title>
+  <link rel="icon" type="image/png" href="../images/logo.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="stylesheet" href="../styles.css" />
+  <link rel="stylesheet" href="../Contact.css">
+</head>
+<body>
+<header class="navbar">
+      <div class="navbar__logo">
+    <a href="../index.html"> <!-- Substitua "index.html" pelo caminho da sua página principal -->
+      <img src="../images/logo.png" alt="Logo" class="logo__image">
+    </a>
+  </div>
+    <div class="menu-toggle">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+    <div class="navbar__menu">
+      <nav class="navbar__nav">
+        <ul class="nav__list">
+          <li class="nav__item"><a href="../index.html">Página Inicial</a></li>
+          <li class="nav__item"><a href="../index.html#sobre-nos">Sobre Nós</a></li>
+          <li class="nav__item"><a href="../index.html#Serviços">Serviços</a></li>
+          <li class="nav__item"><a href="../Pages/ShopPage.html">Produtos</a></li>
+          <li class="nav__item"><a href="../Pages/ContactPage.html" class="active">Contacte-nos</a></li>
+        </ul>
+      </nav>
+      <a href="tel:253632001" class="navbar__contact">
+        <div class="contact__icon contact__icon--circle">
+          <i class="fa-solid fa-phone-volume"></i>
+        </div>
+        <div class="contact__text">
+          <span>Contacte-nos</span>
+          <strong>253 632 001</strong>
+        </div>
+      </a>
+    </div>
+</header>
+
+
+<main class="contact-page">
+
+  <!-- Seção de Formulário + Newsletter -->
+  <section class="contact-top">
+    <!-- Formulário -->
+    <div class="contact-form">
+      <h2>Entre em contato</h2>
+      <form action="https://formsubmit.co/zoomies@gmail.com" method="POST">
+        <div class="input-group">
+          <input type="text" name="name" placeholder="Seu nome" required>
+          <input type="email" name="email" placeholder="Seu email" required>
+        </div>
+        <textarea name="message" placeholder="Sua mensagem" rows="6" required></textarea>
+
+        <!-- Anti-spam e redirecionamento -->
+        <input type="hidden" name="_captcha" value="false">
+        <input type="hidden" name="_next" value="https://seusite.github.io/obrigado.html">
+
+        <button type="submit" class="btn-submit">Enviar</button>
+      </form>
+    </div>
+  </section>
+
+  <!-- Seção de 3 retângulos de informação -->
+  <section class="contact-info-cards">
+    <div class="info-card">
+      <i class="fa-solid fa-phone-volume"></i>
+      <h4>253 632 001</h4>
+      <p>Ligação 24/7 para suporte e informações.</p>
+    </div>
+    <div class="info-card">
+      <i class="fa-solid fa-envelope"></i>
+      <h4>zoomies@gmail.com</h4>
+      <p>Envie-nos um e‑mail a qualquer momento.</p>
+    </div>
+    <div class="info-card">
+      <i class="fa-solid fa-location-dot"></i>
+      <h4>Póvoa de Lanhoso, Braga</h4>
+      <p>Venha nos visitar e traga o seu amiguinho!</p>
+    </div>
+  </section>
+
+  <!-- Seção do Mapa -->
+  <section class="contact-map">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.4499970315196!2d-8.277715925020964!3d41.58114678395605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24e3a733e90e43%3A0xd9cf2f3a25b5b8da!2sZoomies%20Loja%20Animal!5e0!3m2!1spt-PT!2spt!4v1751622705786!5m2!1spt-PT!2spt"
+      frameborder="0" style="border:0;" allowfullscreen="" loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"></iframe>
+  </section>
+
+</main>
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+  <div class="footer__container">
+    <div class="footer__col footer__col--links">
+      <img src="../images/logo.png" alt="Zoomies Logo" class="footer__logo">
+      <ul class="footer__links">
+        <li><a href="#">Página Inicial</a></li>
+        <li><a href="#sobre-nos">Sobre Nós</a></li>
+        <li><a href="#servicos">Serviços</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contactos">Contacte-nos</a></li>
+      </ul>
+    </div>
+    <div class="footer__col footer__col--map">
+      <h4>Encontre-nos</h4>
+      <div class="footer__map">
+        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2984.4499970315196!2d-8.277715925020964!3d41.58114678395605!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd24e3a733e90e43%3A0xd9cf2f3a25b5b8da!2sZoomies%20Loja%20Animal!5e0!3m2!1spt-PT!2spt!4v1751622705786!5m2!1spt-PT!2spt" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <p>R. Paixão Bastos 163, 4830-551 Póvoa de Lanhoso</p>
+    </div>
+    <div class="footer__col footer__col--hours">
+      <h4>Horário de Funcionamento</h4>
+      <p>Seg: 14:30 – 19:00</p>
+      <p>Trç – Sex: 10:00 – 13:00 e das 14:30 – 19:00</p>
+      <p>Sáb: 10:00 – 14:00</p>
+      <p>Dom: Encerrado</p>
+    </div>
+    <div class="footer__col footer__col--social">
+      <h4>Siga-nos</h4>
+      <ul class="footer__social-list">
+        <li><a href="https://www.facebook.com/zoomieslojaanimal/"><i class="fab fa-facebook-f"></i> Facebook</a></li>
+        <li><a href="https://www.instagram.com/zoomieslojaanimal/"><i class="fab fa-instagram"></i> Instagram</a></li>
+        <li><a href="#"><i class="fab fa-whatsapp"></i> WhatsApp</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <p>© 2025 Zoomies. Todos os direitos reservados.</p>
+  </div>
+</footer>
+
+<script src="../main.js"></script>
+<script src="../app.js"></script>
+</body>
+</html>
