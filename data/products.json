@@ -31,11 +31,11 @@
   },
   {
     "id": 4,
-    "nome": "Varinha com Penas para Gato",
+    "nome": "Arranhador com Tunel Superior para Gato",
     "preço": 4.20,
     "familia": "gato",
     "marca": "MiauToys",
-    "descrição": "Varinha interativa com penas coloridas para gatos ativos.",
+    "descrição": "Arranhador com plataforma para conforto.",
     "imagem": "BrinquedoGato.png",
     "categoria": "brinquedos-gato"
   },

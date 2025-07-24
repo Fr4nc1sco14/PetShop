@@ -15,29 +15,25 @@ document.addEventListener('DOMContentLoaded', function() {
   let filteredProducts = [];
 
   // Toggle do menu de filtros
-  filterToggle.addEventListener('click', function() {
-    filterMenu.classList.toggle('active');
-  });
-
-  // Fechar o menu de filtros se clicar fora dele
-  document.addEventListener('click', function(event) {
+  filterToggle.addEventListener('click', () => filterMenu.classList.toggle('active'));
+  document.addEventListener('click', event => {
     if (!filterMenu.contains(event.target) && !filterToggle.contains(event.target)) {
       filterMenu.classList.remove('active');
     }
   });
 
-  // Fetch data and initialize
+  // Fetch data e inicialização
   fetch('../data/products.json')
-    .then(response => response.json())
+    .then(res => res.json())
     .then(data => {
       productsData = data;
       filteredProducts = data;
       renderPage(currentPage);
       renderPagination();
     })
-    .catch(error => console.error('Erro ao carregar products.json:', error));
+    .catch(err => console.error('Erro a carregar products.json:', err));
 
-  // Render products for a given page
+  // Renderiza produtos para uma página
   function renderPage(page) {
     productsContainer.innerHTML = '';
     const start = (page - 1) * itemsPerPage;
@@ -49,7 +45,7 @@ document.addEventListener('DOMContentLoaded', function() {
       productCard.classList.add('product-card');
       productCard.style.animationDelay = `${index * 0.1}s`; // Animação opcional
 
-      // Contêiner da imagem para efeito de sobreposição
+      // Imagem
       const imgContainer = document.createElement('div');
       imgContainer.classList.add('img-container');
       const img = document.createElement('img');
@@ -61,76 +57,64 @@ document.addEventListener('DOMContentLoaded', function() {
       // Seção de texto
       const textSection = document.createElement('div');
       textSection.classList.add('text-section');
-
-      const productName = document.createElement('h3');
-      productName.classList.add('product-name');
-      productName.textContent = product.nome;
-
-      // Adicionando descrição (assumindo que existe um campo 'descricao')
-      const description = document.createElement('p');
-      description.classList.add('product-description');
-      description.textContent = product.descrição || 'Descrição indisponível';
-
-      const price = document.createElement('p');
-      price.classList.add('price');
-      price.textContent = `${product.preço}€`;
-
-      textSection.appendChild(productName);
-      textSection.appendChild(description);
-      textSection.appendChild(price);
+      textSection.innerHTML = `
+        <h3 class="product-name">${product.nome}</h3>
+        <p class="product-description">${product.descrição}</p>
+        <p class="price">${product.preço.toFixed(2)}€</p>
+      `;
       productCard.appendChild(textSection);
 
-      // Adicionando botão
+      // Botão Ver Detalhes com evento de modal
       const button = document.createElement('button');
       button.classList.add('product-button');
       button.textContent = 'Ver Detalhes';
+      button.addEventListener('click', () => {
+        const modal = document.getElementById('productModal');
+        const modalBody = document.getElementById('modal-body');
+        modalBody.innerHTML = `
+          <h2>${product.nome}</h2>
+          <img src="../images/${product.imagem}" alt="${product.nome}" style="max-width:100%; margin:20px 0; border-radius:8px;">
+          <p><strong>Descrição:</strong> ${product.descrição}</p>
+          <p><strong>Preço:</strong> ${product.preço.toFixed(2)}€</p>
+          <p><strong>Marca:</strong> ${product.marca}</p>
+          <p><strong>Família:</strong> ${product.familia}</p>
+          <p><strong>Categoria:</strong> ${product.categoria}</p>
+        `;
+        modal.style.display = 'flex';
+      });
       productCard.appendChild(button);
-
-      // Adicionando badges (exemplo condicional)
-      if (product.isNew) {
-        const badge = document.createElement('span');
-        badge.classList.add('badge', 'new');
-        badge.textContent = 'Novo';
-        productCard.appendChild(badge);
-      }
-      if (product.isOnSale) {
-        const badge = document.createElement('span');
-        badge.classList.add('badge', 'sale');
-        badge.textContent = 'Promoção';
-        productCard.appendChild(badge);
-      }
 
       productsContainer.appendChild(productCard);
     });
   }
 
-  // Render pagination controls
+  // Renderização da paginação
   function renderPagination() {
     paginationContainer.innerHTML = '';
     const pageCount = Math.ceil(filteredProducts.length / itemsPerPage);
 
-    const prevButton = document.createElement('button');
-    prevButton.textContent = 'Anterior';
-    prevButton.disabled = currentPage === 1;
-    prevButton.addEventListener('click', () => changePage(currentPage - 1));
-    paginationContainer.appendChild(prevButton);
+    const prev = document.createElement('button');
+    prev.textContent = 'Anterior';
+    prev.disabled = currentPage === 1;
+    prev.addEventListener('click', () => changePage(currentPage - 1));
+    paginationContainer.appendChild(prev);
 
     for (let i = 1; i <= pageCount; i++) {
-      const pageButton = document.createElement('button');
-      pageButton.textContent = i;
-      if (i === currentPage) pageButton.disabled = true;
-      pageButton.addEventListener('click', () => changePage(i));
-      paginationContainer.appendChild(pageButton);
+      const btn = document.createElement('button');
+      btn.textContent = i;
+      if (i === currentPage) btn.disabled = true;
+      btn.addEventListener('click', () => changePage(i));
+      paginationContainer.appendChild(btn);
     }
 
-    const nextButton = document.createElement('button');
-    nextButton.textContent = 'Próximo';
-    nextButton.disabled = currentPage === pageCount;
-    nextButton.addEventListener('click', () => changePage(currentPage + 1));
-    paginationContainer.appendChild(nextButton);
+    const next = document.createElement('button');
+    next.textContent = 'Próximo';
+    next.disabled = currentPage === pageCount;
+    next.addEventListener('click', () => changePage(currentPage + 1));
+    paginationContainer.appendChild(next);
   }
 
-  // Change page and re-render
+  // Mudar de página
   function changePage(page) {
     currentPage = page;
     renderPage(page);
@@ -138,50 +122,48 @@ document.addEventListener('DOMContentLoaded', function() {
     window.scrollTo({ top: productsContainer.offsetTop - 20, behavior: 'smooth' });
   }
 
-  // Filter and sort products
+  // Filtrar e ordenar produtos
   function filterAndSortProducts() {
     const searchText = document.getElementById('searchFilter').value.toLowerCase();
-    const selectedFamilia = document.getElementById('familiaFilter').value;
-    const selectedCategoria = document.getElementById('categoriaFilter').value;
-    const selectedMarca = document.getElementById('marcaFilter').value;
+    const selFam = document.getElementById('familiaFilter').value;
+    const selCat = document.getElementById('categoriaFilter').value;
+    const selMar = document.getElementById('marcaFilter').value;
     const maxPrice = parseFloat(document.getElementById('priceFilter').value);
-    const stockFilter = document.getElementById('stockFilter').value;
     const sortFilter = document.getElementById('sortFilter').value;
 
-    filteredProducts = productsData.filter(product => {
-      const matchesSearch = product.nome.toLowerCase().includes(searchText);
-      const matchesFamilia = selectedFamilia === 'all' || product.familia === selectedFamilia;
-      const matchesCategoria = selectedCategoria === 'all' || product.categoria === selectedCategoria;
-      const matchesMarca = selectedMarca === 'all' || product.marca === selectedMarca;
-      const matchesPrice = product.preço <= maxPrice;
-      const matchesStock = stockFilter === 'all' || (stockFilter === 'in-stock' && true);
-
-      return matchesSearch && matchesFamilia && matchesCategoria && matchesMarca && matchesPrice && matchesStock;
+    filteredProducts = productsData.filter(p => {
+      return p.nome.toLowerCase().includes(searchText)
+        && (selFam === 'all' || p.familia === selFam)
+        && (selCat === 'all' || p.categoria === selCat)
+        && (selMar === 'all' || p.marca === selMar)
+        && p.preço <= maxPrice;
     });
 
-    if (sortFilter === 'price-asc') {
-      filteredProducts.sort((a, b) => a.preço - b.preço);
-    } else if (sortFilter === 'price-desc') {
-      filteredProducts.sort((a, b) => b.preço - a.preço);
-    } else if (sortFilter === 'name-asc') {
-      filteredProducts.sort((a, b) => a.nome.localeCompare(b.nome));
-    }
+    if (sortFilter === 'price-asc') filteredProducts.sort((a, b) => a.preço - b.preço);
+    else if (sortFilter === 'price-desc') filteredProducts.sort((a, b) => b.preço - a.preço);
+    else if (sortFilter === 'name-asc') filteredProducts.sort((a, b) => a.nome.localeCompare(b.nome));
 
     currentPage = 1;
-    renderPage(currentPage);
+    renderPage(1);
     renderPagination();
   }
 
-  // Event listeners for filters
-  document.getElementById('searchFilter').addEventListener('input', filterAndSortProducts);
-  document.getElementById('familiaFilter').addEventListener('change', filterAndSortProducts);
-  document.getElementById('categoriaFilter').addEventListener('change', filterAndSortProducts);
-  document.getElementById('marcaFilter').addEventListener('change', filterAndSortProducts);
+  // Eventos para filtros
+  ['searchFilter','familiaFilter','categoriaFilter','marcaFilter','sortFilter'].forEach(id => {
+    const eventType = id === 'searchFilter' ? 'input' : 'change';
+    document.getElementById(id).addEventListener(eventType, filterAndSortProducts);
+  });
   document.getElementById('priceFilter').addEventListener('input', () => {
-    const priceValue = document.getElementById('priceFilter').value;
-    document.getElementById('priceValue').textContent = `Até ${priceValue}€`;
+    document.getElementById('priceValue').textContent = `Até ${document.getElementById('priceFilter').value}€`;
     filterAndSortProducts();
   });
-  document.getElementById('stockFilter').addEventListener('change', filterAndSortProducts);
-  document.getElementById('sortFilter').addEventListener('change', filterAndSortProducts);
+
+  // Fechar modal
+  const modal = document.getElementById('productModal');
+  document.querySelector('.close-modal').addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+  window.addEventListener('click', e => {
+    if (e.target === modal) modal.style.display = 'none';
+  });
 });
