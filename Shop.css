@@ -14,6 +14,7 @@
 }
 
 .filters {
+  text-decoration: none;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -349,6 +350,7 @@
     width: 100%; /* Filtros ocupam toda a largura */
     border-right: none;
     border-bottom: 1px solid #fff9f1;
+    text-decoration: none;
   }
   .Shop-Products {
     width: 100%; /* Produtos ocupam toda a largura */
@@ -367,6 +369,7 @@
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #fff9f1;
+    text-decoration: none;
   }
   .filter-toggle {
     display: block; /* Mostrado em telas menores */
@@ -417,6 +420,8 @@
     width: 100%;
     border-right: none;
     border-bottom: 1px solid #fff9f1;
+    text-decoration: none;
+
   }
   .filter-group {
     display: block; /* Cada grupo de filtro em uma linha */
